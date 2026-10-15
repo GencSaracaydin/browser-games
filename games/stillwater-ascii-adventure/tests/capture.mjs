@@ -1,0 +1,12 @@
+import {chromium} from 'playwright';
+import fs from 'node:fs';
+fs.mkdirSync('test-results',{recursive:true});
+const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--enable-webgl','--ignore-gpu-blocklist','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+await page.goto('http://127.0.0.1:5174/?test=1');await page.waitForFunction(()=>window.render_game_to_text);await page.waitForTimeout(2500);
+await page.screenshot({path:'test-results/intro.png'});
+await page.click('#start-btn');await page.evaluate(()=>{window.advanceTime(2500);window.__stillwater.pauseAuto();});await page.screenshot({path:'test-results/play.png'});
+await page.evaluate(()=>{window.__stillwater.teleport(0,4);window.__stillwater.setCamera(.3,12);window.advanceTime(1000);});await page.evaluate(()=>window.__stillwater.pauseAuto());await page.screenshot({path:'test-results/water.png'});
+console.log(JSON.stringify({errors,state:JSON.parse(await page.evaluate(()=>render_game_to_text()))},null,2));
+await browser.close();

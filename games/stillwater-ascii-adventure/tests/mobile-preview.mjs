@@ -1,0 +1,11 @@
+import {chromium} from 'playwright';
+const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+const page=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+await page.goto('http://127.0.0.1:5173/?test=1');await page.waitForFunction(()=>window.__stillwater);
+await page.screenshot({path:'test-results/mobile-intro.png',animations:'disabled'});
+await page.click('#start-btn');await page.evaluate(()=>{window.advanceTime(5000);window.__stillwater.pauseAuto();});
+await page.screenshot({path:'test-results/mobile-play.png',animations:'disabled'});
+await page.evaluate(()=>{window.__stillwater.teleport(0,3);window.__stillwater.setCamera(.15,9);});
+await page.keyboard.down('ArrowUp');await page.evaluate(()=>{window.advanceTime(500);window.__stillwater.pauseAuto();});await page.keyboard.up('ArrowUp');
+await page.screenshot({path:'test-results/mobile-water.png',animations:'disabled'});
+await browser.close();
