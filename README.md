@@ -10,7 +10,7 @@ An original 2D coastal open-world game with tiny characters, fast cars, gunfight
 
 [![Watch the Sunline City gameplay demo](games/sunline-city/demo/sunline-city-demo.jpg)](games/sunline-city/demo/sunline-city-action-demo.mp4)
 
-**Watch the 30-second demo:** gunfights, nitro, a heist getaway, drifting, racing, and a stunt jump, with original game audio. [Open or download the 1080p MP4](games/sunline-city/demo/sunline-city-action-demo.mp4).
+**Watch the 30-second demo:** gunfights, nitro, a heist getaway, drifting, a bounty shootout, and a police chase, with original game audio. [Open or download the 1080p MP4](games/sunline-city/demo/sunline-city-action-demo.mp4).
 
 ### Run locally
 
