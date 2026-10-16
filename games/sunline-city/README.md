@@ -8,7 +8,7 @@ An original 2D coastal open-world game with tiny characters, hand-drawn architec
 
 ## Gameplay demo
 
-[![Watch Sunline City: gunfights, nitro, heists, drifting, and police chases](demo/sunline-city-demo.jpg)](demo/sunline-city-action-demo.mp4)
+[![Watch Sunline City: gunfights, nitro, heists, drifting, and weapon selection](demo/sunline-city-demo.jpg)](demo/sunline-city-action-demo.mp4)
 
 A 30-second gameplay trailer with original game music and sound effects. [Open or download the 1080p MP4](demo/sunline-city-action-demo.mp4).
 
