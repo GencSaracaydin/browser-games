@@ -1,7 +1,0 @@
-[
- ["3d", "FAL_SCRAMBLER_BOX", "--tag", "tripo_t1", "--image", "RawAssets/wp09/FAL_SCRAMBLER_BOX/ref_noparts.png", "--faces", "5000"],
- ["3d", "FAL_INTERROGATION_CHAIR", "--tag", "tripo_t1", "--image", "RawAssets/wp09/FAL_INTERROGATION_CHAIR/ref_t1.png", "--faces", "8000"],
- ["3d", "FAL_ROTARY_PHONE", "--tag", "tripo_t1", "--image", "RawAssets/wp09/FAL_ROTARY_PHONE/ref_t1.png", "--faces", "3500"],
- ["3d", "FAL_REEL_TO_REEL", "--tag", "tripo_t1", "--image", "RawAssets/wp09/FAL_REEL_TO_REEL/ref_noreels.png", "--faces", "6000"],
- ["3d", "FAL_AV_CART", "--tag", "tripo_t1", "--image", "RawAssets/wp09/FAL_AV_CART/ref_t1.png", "--faces", "3000"]
-]

@@ -4,7 +4,7 @@ A collection of playable browser game projects and their checkpoints.
 
 ## Operation Long Shadow
 
-[Source, controls and design docs](games/operation-long-shadow/README.md) · **In development**
+[Overview and controls](games/operation-long-shadow/README.md) · [Full Unity project](https://github.com/GencSaracaydin/operation-long-shadow) · **In development**
 
 A Cold War first-person shooter in the style of Call of Duty: Black Ops, built in Unity 6 for WebGL. October 1984: a four-man black-ops team raids a sun-baked market town in a fictional desert republic at golden hour, while a numbers station starts reading on their own radio. The mission includes a helicopter insertion cold open, AI squadmates, radio chatter and an interrogation-room framing story.
 
