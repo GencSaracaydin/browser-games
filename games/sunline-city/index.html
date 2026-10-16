@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#142f36" />
+  <meta name="description" content="A little city. A long summer. Sunline is a playable coastal open-world driving adventure." />
+  <title>SUNLINE — A little city. A long summer.</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <canvas id="game" tabindex="0" aria-label="Sunline coastal city game"></canvas>
+  <div id="vignette" aria-hidden="true"></div>
+  <main id="ui">
+    <section id="intro" class="screen">
+      <div class="intro-top"><span class="edition">AN OPEN-WORLD SUMMER</span><span class="coordinates">25° 47′ N &nbsp; 80° 08′ W</span></div>
+      <div class="intro-copy"><div class="eyebrow">WELCOME TO THE OTHER SIDE OF PARADISE</div><h1>Sunline<span>City</span></h1><p class="tagline">A little city.<br>A long summer.</p><p class="intro-description">Ten neighborhoods. A thousand ways to wander.<br>Your next adventure is just down the road.</p><div class="intro-actions"><button id="start-btn" class="primary">Take the keys <span>↗</span></button><button id="intro-controls" class="text-btn">How to play</button></div><p id="save-note" class="save-note">Your summer is saved automatically.</p></div>
+      <div class="intro-bottom"><span>PALM TREES. PETTY CRIME. PERFECT WEATHER.</span><span>FLORIDA &nbsp; / &nbsp; AN ENDLESS AFTERNOON</span></div>
+      <div class="postcard-stamp">SUNLINE<br><b>☼</b><small>FLORIDA / 1986</small></div>
+    </section>
+    <section id="hud" hidden>
+      <header class="hud-top"><div class="brand"><span class="brand-sun">☼</span><div><b>SUNLINE</b><small id="district">OCEAN BEACH</small></div></div><div class="hud-tools"><button id="adventures-btn" aria-label="Open adventures" title="Adventures (J)">Adventures <kbd>J</kbd></button><button id="loadout-btn" aria-label="Open weapon loadout" title="Loadout (B)">Loadout <kbd>B</kbd></button><button id="journal-btn" aria-label="Open neighborhood journal" title="Journal (P)"><span>Journal</span> <kbd>P</kbd></button><button id="map-btn" aria-label="Open city map" title="City map (M)">Map <kbd>M</kbd></button><button id="sound-btn" aria-label="Enable sound" title="Toggle radio (V)">♫ <span id="sound-label">OFF</span></button><button id="pause-btn" aria-label="Pause game" title="Pause (Esc)">Ⅱ</button></div><div class="wallet"><div id="cash">$250</div><div id="wanted" aria-label="Wanted level">☆☆☆</div></div></header>
+      <div id="objective" class="objective"><div class="objective-label"><span id="mission-number">01 / 05</span><span id="objective-category">A SUMMER JOB</span></div><h2 id="objective-title">Welcome to Sunline</h2><p id="objective-detail">Find Luca at The Palms.</p><div id="objective-extra"></div></div>
+      <div id="arrival"><small>WELCOME TO</small><h2></h2><p></p></div><div id="photo-flash" aria-hidden="true"></div><div id="toast" role="status" aria-live="polite"></div>
+      <div id="chase" hidden><span id="chase-label">LOSE THE HEAT</span><div><i id="chase-fill"></i></div></div>
+      <div class="bottom-left"><div id="minimap" aria-label="Minimap"><div class="map-north">N ↑</div></div><div class="map-caption"><span id="location">THE PALMS</span><span id="clock">16:42</span></div><div class="vitals"><span>YOU</span><div><i id="health-fill"></i></div><span id="tapes">♫ 0 / 12</span></div></div>
+      <div id="context" class="context"><kbd>E</kbd><span>Talk to Luca</span></div>
+      <div class="bottom-right"><div id="onfoot-status"><span id="ammo">12</span><small id="ammo-capacity"> / 12</small><small id="ammo-reserve">60 RESERVE</small><div id="weapon-name">SERVICE PISTOL</div><div class="reload-track"><i id="reload-fill"></i></div><div class="weapon-hints">R RELOAD · 1–4 SWITCH</div><div id="dodge-status">Q DODGE</div></div><div id="speedometer" hidden><span id="speed">0</span><small>MPH</small><div id="car-name">SUNSET GT</div><div class="car-health"><i id="car-health-fill"></i></div><div class="nitro-meter" id="nitro-meter"><div class="nitro-label"><span id="nitro-status">SHIFT BOOST</span><span>NITRO</span></div><div class="nitro-track"><i id="nitro-fill"></i></div></div><div id="drift-status"></div></div><div class="radio"><span class="radio-light"></span><div><b>SUNLINE FM</b><small id="radio-track">88.6 • THE COAST IS CLEAR</small></div><span class="radio-wave">▂▅▃▇▂</span></div><div class="help-hint">WASD move · Shift boost · P journal · C photo</div></div>
+      <div id="touch-extra"><div id="touch-combat-tools"><button id="touch-cycle" aria-label="Switch weapon">1–4</button><button id="touch-reload" aria-label="Reload weapon">R</button><button id="touch-dodge" aria-label="Dodge">Q</button></div><button id="touch-photo" aria-label="Take a postcard" hidden>▣ C</button><button id="touch-service" aria-label="Open nearby shop or workshop" hidden>G</button></div><div id="touch-controls"><div class="dpad"><button data-key="ArrowUp" class="up" aria-label="Move forward">↑</button><button data-key="ArrowLeft" class="left" aria-label="Turn left">←</button><button data-key="ArrowDown" class="down" aria-label="Reverse">↓</button><button data-key="ArrowRight" class="right" aria-label="Turn right">→</button></div><div class="touch-actions"><button id="touch-e">E</button><button data-key="Space">◎</button><button data-key="ShiftLeft">⇧</button></div></div>
+    </section>
+    <section id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title"><div id="modal-panel" class="modal-panel"></div></section>
+    <div id="mission-banner" hidden><small>JOB COMPLETE</small><h2></h2><p></p></div>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

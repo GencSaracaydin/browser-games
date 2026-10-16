@@ -1,0 +1,17 @@
+{
+  "name": "sunline-city",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5174",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5174",
+    "test": "node tests/qa.mjs && node tests/combat-unit.mjs && node tests/activity-unit.mjs && node tests/county-world.mjs && node tests/combat-browser.mjs && node tests/expansion-activities.mjs && node tests/expansion-ui.mjs && node tests/release-regression.mjs && node tests/driving-features.mjs && node tests/exploration-features.mjs && node tests/neighborhood-world.mjs && node tests/neighborhood-ui.mjs && node tests/neighborhood-release.mjs",
+    "test:story": "node tests/qa.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0",
+    "playwright": "^1.55.0"
+  }
+}
