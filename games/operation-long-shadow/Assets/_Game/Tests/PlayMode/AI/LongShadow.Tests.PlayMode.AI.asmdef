@@ -1,0 +1,26 @@
+{
+    "name": "LongShadow.Tests.PlayMode.AI",
+    "rootNamespace": "LongShadow.Tests.PlayMode.AI",
+    "references": [
+        "LongShadow.Core",
+        "LongShadow.AI",
+        "Unity.AI.Navigation",
+        "Unity.Splines",
+        "Unity.Mathematics",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

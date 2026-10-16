@@ -1,0 +1,19 @@
+{
+ "_comment": "WP09 booth Poly Haven jobs for Tools/images/wp09_ph_model.py (format of Tools/cc0/wp10_props.json plus screen / clock_zero / item_pivot / part_pivots). Coordinates are Blender source metres (front = -Y, up = +Z).",
+ "PH_TELEVISION_01": {"name": "Television01", "tris": 1918, "tex": 1024, "pivot": "bottom",
+   "screen": {"rect": [-0.272, 0.140, 0.098, 0.418], "max_lum": 0.45, "depth": 0.08, "margin": 0.003},
+   "note": "Booth CRT1-3 (vary scale 0.9-1.1). Submesh M_Television01_Screen = CRT glass with UV0 0..1 (u = viewer's right, v = up) for SG_CRTScreen + RT_CRTn (512x384)."},
+ "PH_TELEVISION_02": {"name": "Television02", "tris": 2310, "tex": 1024, "pivot": "bottom",
+   "screen": {"rect": [-0.160, 0.160, 0.126, 0.374], "max_lum": 0.45, "depth": 0.08, "margin": 0.003},
+   "note": "Booth CRT4-6. Submesh M_Television02_Screen = CRT glass with UV0 0..1 (u = viewer's right, v = up) for SG_CRTScreen + RT_CRTn (512x384)."},
+ "PH_WALL_CLOCK": {"name": "WallClock", "tris": 3658, "tex": 512, "lods": [1],
+   "parts": {"HandHour": ["wall_clock_hours_hand"], "HandMinute": ["wall_clock_minute_hand"], "HandSecond": ["wall_clock_second_hand"]},
+   "part_pivot": "origin", "clock_zero": ["HandHour", "HandMinute", "HandSecond"],
+   "note": "Hands are children pivoted on the dial centre and set to 12:00. Time h:m -> HandHour local Z = -(h%12 + m/60)*30 deg, HandMinute local Z = -m*6 deg, HandSecond local Z = -s*6 deg (negative = clockwise seen from the front). Booth: 6:40 -> hour -200, minute -240; second hand twitches in place. Root pivot = back centre (wall plane); front faces +Z, so on the booth's far wall rotate 180 deg about Y. Glass submesh M_WallClock_Glass: Transparent; booth crack overlay T_WallClockGlassCrack_A (WP09) as its base map."},
+ "PH_VINTAGE_LIGHTER": {"name": "SteelLighter", "tris": 3366, "tex": 512, "lods": [1], "pivot": "bottom",
+   "parts": {"Lid": ["vintage_lighter_hinge"], "Wheel": ["vintage_lighter_flintstone"]},
+   "part_pivots": {"Lid": [-0.019, 0.0, 0.0245]},
+   "note": "Interrogator's steel lighter (bronze finish recoloured to worn brushed steel, brand and emblem removed). Lid child pivots on the hinge (rotate about local Z to close, ~+100 deg; verify sign), Wheel child spins about local X."},
+ "PH_MOUNTED_FLUORESCENT_LIGHTS": {"name": "FluorescentBatten", "tris": 8910, "tex": 512, "items": true, "item_pivot": "top", "lods": [1],
+   "note": "Seven 0.91 m ceiling battens as separate children (single/twin/triple tube, open and diffuser). Booth uses FluorescentBatten_A (single tube) at (0, 2.95, 0.6); pivots = ceiling mounting face centre. Emission submesh M_FluorescentBatten_Glass: drive emission from the tube flicker curve."}
+}

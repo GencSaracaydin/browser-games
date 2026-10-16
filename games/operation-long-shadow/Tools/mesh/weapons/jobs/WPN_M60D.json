@@ -1,0 +1,88 @@
+{
+ "id": "WPN_M60D",
+ "name": "M60D",
+ "folder": "M60D",
+ "length": 1.1,
+ "body": "RawAssets/wp03/WPN_M60D/hy_take1/00_bOxSXHqfjhd9Ieea2BpgI_model.glb",
+ "body_take": "hy_take1 (Hunyuan v3.1 Pro, ref_left + nano-banana right view as back image, 40k -> 20k FP); no magazine (belt-fed, the short belt is part of the body)",
+ "work": "RawAssets/wp03/WPN_M60D/build_hy",
+ "left_img": "RawAssets/wp03/WPN_M60D/ref_left",
+ "right_img": "RawAssets/wp03/WPN_M60D/right",
+ "sockets_img": {
+  "Muzzle": [
+   95,
+   713
+  ],
+  "SightFront": [
+   1529,
+   478
+  ],
+  "SightRear": [
+   2300,
+   478
+  ],
+  "GripCenter": [
+   2615,
+   750
+  ],
+  "Grip": [
+   2615,
+   750
+  ],
+  "LeftHand": [
+   2615,
+   750
+  ],
+  "Eject": [
+   1801,
+   760
+  ],
+  "Feed": [
+   1751,
+   676
+  ],
+  "Pivot": [
+   1927,
+   863
+  ],
+  "Base": [
+   1902,
+   1138
+  ]
+ },
+ "sockets_dx": {
+  "Grip": -0.06,
+  "LeftHand": 0.06,
+  "Feed": 0.05
+ },
+ "pivot": "GripCenter",
+ "fp": {
+  "tris": 20000,
+  "ao_size": 1024
+ },
+ "world": {
+  "tris": 8000,
+  "lods": [
+   0.5,
+   0.22
+  ],
+  "sockets": [
+   "Muzzle",
+   "Grip",
+   "LeftHand",
+   "Pivot",
+   "Base",
+   "SightRear",
+   "SightFront"
+  ]
+ },
+ "ao_distance": 0.05,
+ "tex": {
+  "project_metal": 0.8,
+  "grade_metal": "smooth=0.4,metal=0.55,val=0.8",
+  "smooth_max": 0.5
+ },
+ "review": {
+  "fp_cam": "[0.04,0.42,0.2];[0.0,-0.6,0.08];30"
+ }
+}

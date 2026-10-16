@@ -1,0 +1,18 @@
+{
+ "id": "WPN_AK", "name": "AK", "folder": "AK", "length": 0.88,
+ "body": "RawAssets/wp03/WPN_AK/hy_take1/00_U-KcqOEhnGWgu-GfWH-fx_model.glb",
+ "body_take": "hunyuan v3.1 pro multi-view (nomag + right), 40k -> 20k FP; kept over tripo_take1 (cleaner geometry, no flipped faces, sharper receiver)",
+ "work": "RawAssets/wp03/WPN_AK/build",
+ "left_img": "RawAssets/wp03/WPN_AK/nomag",
+ "right_img": "RawAssets/wp03/WPN_AK/right",
+ "full_img": "RawAssets/fal3d/01_rifle_ref_image/rifle_ref.png",
+ "sockets_img": {"Muzzle": [80, 675], "SightFront": [207, 560], "SightRear": [1290, 538], "Grip": [1880, 860], "LeftHand": [950, 700], "Eject": [1500, 650]},
+ "pivot": "Grip",
+ "mag": {"id": "WPN_AK_MAG", "glb": "RawAssets/wp03/WPN_AK_MAG/tripo_take1/00_T9ZCT7JoPk68hklwlHIHw_model.glb", "tris": 1500, "tex": 512,
+         "fit": {"mode": "mask"}, "texopts": {"project_metal": 0.7}},
+ "fp": {"tris": 20000, "ao_size": 1024},
+ "world": {"tris": 6000, "mag_tris": 600, "lods": [0.5, 0.22]},
+ "ao_distance": 0.04,
+ "tex": {"project_metal": 0.6, "grade_wood": "sat=0.85,val=0.9,smooth=0.4,nstr=0.6", "grade_metal": "smooth=0.45"},
+ "review": {"fp_cam": "[0.1,0.22,0.16];[0.0,-0.6,0.04];22"}
+}

@@ -1,0 +1,17 @@
+{
+    "name": "LongShadow.Input",
+    "rootNamespace": "LongShadow.Input",
+    "references": [
+        "LongShadow.Core",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

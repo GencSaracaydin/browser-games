@@ -1,0 +1,56 @@
+{
+ "id": "WPN_SMOKE_GRENADE",
+ "name": "SmokeGrenade",
+ "folder": "Smoke",
+ "length": 0.145,
+ "length_axis": "Z",
+ "orient": "upright",
+ "body": "RawAssets/wp03/WPN_SMOKE_GRENADE/tripo_take1/00_cs_z5-QjyDGmWlqfY2oMm_model.glb",
+ "body_take": "tripo_take1 (Tripo P2 from the 3/4 reference, face_limit 1000); no photo projection (3/4 view)",
+ "work": "RawAssets/wp03/WPN_SMOKE_GRENADE/build",
+ "left_img": "RawAssets/wp03/WPN_SMOKE_GRENADE/ref_left",
+ "proj": false,
+ "pivot": "origin",
+ "world": {
+  "tris": 1000,
+  "lods": [
+   0.5
+  ],
+  "ao_size": 512,
+  "sockets": []
+ },
+ "ao_distance": 0.012,
+ "tex": {
+  "bc": 512,
+  "n": 512,
+  "m": 512,
+  "grade_metal": "smooth=0.5",
+  "smooth_max": 0.5,
+  "skins": [
+   {
+    "suffix": "Green",
+    "recolor": {
+     "from": [
+      208,
+      211,
+      211
+     ],
+     "to": [
+      62,
+      112,
+      52
+     ],
+     "tol": 30
+    }
+   }
+  ]
+ },
+ "review": {
+  "views": "front34,rear34,top,iso"
+ },
+ "cap": {
+  "mode": "existing",
+  "band_m": 0.0045,
+  "radius_frac": 0.98
+ }
+}

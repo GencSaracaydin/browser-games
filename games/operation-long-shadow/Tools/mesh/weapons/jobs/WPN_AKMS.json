@@ -1,0 +1,54 @@
+{
+ "id": "WPN_AKMS",
+ "name": "AKMS",
+ "folder": "AKMS",
+ "length": 0.88,
+ "body": "RawAssets/wp03/WPN_AKMS/hy_take1/00_7piBxadYfGoEQ-JZ1UWsJ_model.glb",
+ "body_take": "hy_take1 (Hunyuan v3.1 Pro, ref_left + nano-banana right view as back image, 40k -> 6k with a high-to-low normal bake)",
+ "work": "RawAssets/wp03/WPN_AKMS/build_hy",
+ "left_img": "RawAssets/wp03/WPN_AKMS/ref_left",
+ "sockets_img": {
+  "Muzzle": [
+   131,
+   672
+  ],
+  "SightFront": [
+   250,
+   514
+  ],
+  "SightRear": [
+   1243,
+   529
+  ],
+  "Grip": [
+   1857,
+   900
+  ],
+  "LeftHand": [
+   1000,
+   670
+  ]
+ },
+ "pivot": "Grip",
+ "world": {
+  "tris": 6000,
+  "lods": [
+   0.5,
+   0.22
+  ],
+  "ao_size": 1024,
+  "sockets": [
+   "Muzzle",
+   "LeftHand",
+   "SightRear"
+  ]
+ },
+ "ao_distance": 0.04,
+ "tex": {
+  "project_metal": 0.6,
+  "grade_wood": "sat=0.95,val=0.9,smooth=0.4,nstr=0.7",
+  "grade_metal": "smooth=0.38,metal=0.6,val=0.62"
+ },
+ "review": {},
+ "right_img": "RawAssets/wp03/WPN_AKMS/right"
+}

@@ -1,0 +1,14 @@
+[
+ [
+  "raw",
+  "VID_GUNCAM",
+  "--tag",
+  "kling_t2",
+  "--endpoint",
+  "fal-ai/kling-video/v3/pro/image-to-video",
+  "--est",
+  "1.35",
+  "--args-json",
+  "{\"start_image_url\": \"@RawAssets/wp09/VID_GUNCAM/still_t1.png\", \"duration\": \"12\", \"generate_audio\": false, \"cfg_scale\": 0.7, \"prompt\": \"Black-and-white 1980s helicopter gun-camera footage from a camera rigidly bolted to the side of the helicopter, so the helicopter body, the open cabin door and the landing skid stay locked in the same place in the frame for the whole shot. The helicopter flies fast and low in a straight line over a sun-baked desert town at dusk, flat rooftops and streets streaming past below with motion blur, slight vibration and buffeting. The door gunner sits still in the dark cabin. Continuous single shot, nothing else happens.\", \"negative_prompt\": \"rocket, missile, smoke trail, explosion, fire, muzzle flash, crash, camera spin, cuts, text, subtitles, logos, colour, blur, distortion, low quality\"}"
+ ]
+]

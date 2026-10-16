@@ -2,6 +2,12 @@
 
 A collection of playable browser game projects and their checkpoints.
 
+## Operation Long Shadow
+
+[Source, controls and design docs](games/operation-long-shadow/README.md) · **In development**
+
+A Cold War first-person shooter in the style of Call of Duty: Black Ops, built in Unity 6 for WebGL. October 1984: a four-man black-ops team raids a sun-baked market town in a fictional desert republic at golden hour, while a numbers station starts reading on their own radio. The mission includes a helicopter insertion cold open, AI squadmates, radio chatter and an interrogation-room framing story.
+
 ## Sunline City
 
 [Play now](https://sunline-city-summer.fal-ai-3289.chatgpt.site/) · [Source and controls](games/sunline-city/README.md) · [Gameplay demo](games/sunline-city/demo/sunline-city-action-demo.mp4)

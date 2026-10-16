@@ -1,0 +1,52 @@
+[
+ [
+  "nb",
+  "IMG_TEAM_ID_PHOTOS",
+  "--tag",
+  "card_plate",
+  "--aspect",
+  "4:3",
+  "--prompt",
+  "A flat high-resolution flatbed scan, even lighting, no shadows, the sheet fills the whole frame edge to edge: an empty 1970s buff manila personnel file card, slightly yellowed, soft fibre texture, faint pale-blue ruled lines across the lower half, worn rounded corners, a rust mark from an old paperclip at the top left, a small coffee stain, light handling grime. Completely blank: no text, no printing, no letters, no numbers, no logos."
+ ],
+ [
+  "nb",
+  "IMG_ROSTER_PAGE",
+  "--tag",
+  "plate",
+  "--aspect",
+  "3:4",
+  "--prompt",
+  "A flat high-resolution flatbed scan, even lighting, no shadows, the sheet fills the whole frame edge to edge: a single blank sheet of thin translucent 1970s onion-skin typing paper, faintly yellowed, crinkled, soft crease lines, a punched binder hole on the left edge, faint ghosting of carbon smudges, slightly uneven edges. Completely blank: no text, no typing, no letters, no numbers, no logos."
+ ],
+ [
+  "nb",
+  "IMG_TELETYPE_FEED",
+  "--tag",
+  "plate",
+  "--aspect",
+  "3:4",
+  "--prompt",
+  "A flat high-resolution flatbed scan, even lighting, no shadows, the sheet fills the whole frame edge to edge: a length of blank canary-yellow 1970s teletype printer roll paper, slightly curled at the edges, faint vertical feed marks, a few grey smudges and a soft fold. Completely blank: no text, no letters, no numbers, no logos."
+ ],
+ [
+  "nb",
+  "IMG_DEBRIEF_DOSSIER",
+  "--tag",
+  "plate",
+  "--aspect",
+  "4:3",
+  "--prompt",
+  "A flat high-resolution flatbed scan, even lighting, no shadows, the sheet fills the whole frame edge to edge: a blank sheet of off-white 1980s government bond typing paper lying in an open buff manila folder, the folder edge visible around the sheet, a red-and-white diagonal striped border on the sheet edges like a classified cover sheet, a staple at the top left, faint creases and handling marks. Completely blank: no text, no headings, no letters, no numbers, no logos."
+ ],
+ [
+  "nb",
+  "PROC_BOOTH_SHELL",
+  "--tag",
+  "drain_t1",
+  "--aspect",
+  "1:1",
+  "--prompt",
+  "A straight top-down photograph of a round cast-iron floor drain grate about 15 cm across set into a worn grey concrete floor of a 1970s basement room, slotted radial grate, rust stains bleeding into the concrete around it, a dark damp ring, grime in the slots, flat even overhead lighting, sharp focus, the drain centred and filling about 60 percent of the frame. No text, no logos, no markings."
+ ]
+]

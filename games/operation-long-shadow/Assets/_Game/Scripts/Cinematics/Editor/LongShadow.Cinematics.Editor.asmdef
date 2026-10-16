@@ -1,0 +1,30 @@
+{
+    "name": "LongShadow.Cinematics.Editor",
+    "rootNamespace": "LongShadow.Cinematics.Editor",
+    "references": [
+        "LongShadow.Core",
+        "LongShadow.Core.Editor",
+        "LongShadow.Cinematics",
+        "Unity.Timeline",
+        "Unity.Timeline.Editor",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.RenderPipelines.Universal.Editor",
+        "Unity.Recorder",
+        "Unity.Recorder.Editor",
+        "Unity.Recorder.Base"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

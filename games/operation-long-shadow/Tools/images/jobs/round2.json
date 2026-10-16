@@ -1,0 +1,187 @@
+[
+ [
+  "edit",
+  "IMG_SURVEIL_SPARROW",
+  "--tag",
+  "take_a",
+  "--src",
+  "RawAssets/wp09/IMG_AIRPORT_PLATE/take_a.png",
+  "RawAssets/wp09/IMG_SURVEIL_SPARROW/refs/Sparrow_face.png",
+  "RawAssets/wp09/IMG_SURVEIL_SPARROW/refs/Sparrow_body.png",
+  "--prompt",
+  "Edit the first image, a 1984 long-lens surveillance photograph of an empty airport departure concourse. Insert exactly one woman into it, the same person as in the second and third images (a 3D character reference: match her face, complexion and build): a woman in her early thirties with light-brown skin and dark hair pulled back in a single long braid, large dark 1980s aviator sunglasses, a faded khaki safari shirt with rolled sleeves over a white T-shirt, tan cotton trousers, desert boots, a worn brown leather camera bag on a strap across her body. She walks across the concourse in the middle distance toward the windows, seen in three-quarter profile, unaware of the camera, caught mid-stride, lit by the warm low sun from the windows with a long shadow on the terrazzo floor. She must look photographed in the same frame: keep the original grain, telephoto compression, shallow depth of field, faded warm colour and window haze, she is slightly soft and partly lost in the grain. She is the only person. Photorealistic, not a 3D render. No text, no signage, no logos.",
+  "--aspect",
+  "4:3"
+ ],
+ [
+  "edit",
+  "IMG_SURVEIL_SPARROW",
+  "--tag",
+  "take_b",
+  "--src",
+  "RawAssets/wp09/IMG_AIRPORT_PLATE/take_a.png",
+  "RawAssets/wp09/IMG_SURVEIL_SPARROW/refs/Sparrow_face.png",
+  "RawAssets/wp09/IMG_SURVEIL_SPARROW/refs/Sparrow_body.png",
+  "--prompt",
+  "Edit the first image, a 1984 long-lens surveillance photograph of an empty airport departure concourse. Insert exactly one woman into it, the same person as in the second and third images (a 3D character reference: match her face, complexion and build): a woman in her early thirties with light-brown skin and dark hair pulled back in a single long braid, large dark 1980s aviator sunglasses, a faded khaki safari shirt with rolled sleeves over a white T-shirt, tan cotton trousers, desert boots, a worn brown leather camera bag on a strap across her body. She walks across the concourse in the middle distance toward the windows, seen in three-quarter profile, unaware of the camera, caught mid-stride, lit by the warm low sun from the windows with a long shadow on the terrazzo floor. She must look photographed in the same frame: keep the original grain, telephoto compression, shallow depth of field, faded warm colour and window haze, she is slightly soft and partly lost in the grain. She is the only person. Photorealistic, not a 3D render. No text, no signage, no logos.",
+  "--aspect",
+  "4:3"
+ ],
+ [
+  "edit",
+  "IMG_TEAM_ID_PHOTOS",
+  "--tag",
+  "hollis_a",
+  "--src",
+  "RawAssets/wp09/IMG_TEAM_ID_PHOTOS/refs/Hollis_face.png",
+  "RawAssets/wp09/IMG_TEAM_ID_PHOTOS/refs/Hollis_side.png",
+  "--prompt",
+  "Turn the person in these 3D character renders into a real photograph of the same person, keeping the face shape, nose, eyes, eyebrows, ears and skin tone: a 1984 government identification photograph, head and shoulders, facing the camera straight on, neutral closed-mouth expression, a weathered man aged 46 with a grey stubble beard and moustache, short-cropped grey hair, crow's feet, no hat, wearing a plain tan field shirt. Plain light-grey paper backdrop, flat direct on-camera flash with a faint shadow behind the head, black-and-white silver gelatin print, fine grain, slight softness, real skin pores and stubble. Photorealistic, not a 3D render, not a painting. No text, no numbers, no letters, no insignia, no name tapes, no badges, no border.",
+  "--aspect",
+  "3:4"
+ ],
+ [
+  "edit",
+  "IMG_TEAM_ID_PHOTOS",
+  "--tag",
+  "sparrow_a",
+  "--src",
+  "RawAssets/wp09/IMG_TEAM_ID_PHOTOS/refs/Sparrow_face.png",
+  "RawAssets/wp09/IMG_TEAM_ID_PHOTOS/refs/Sparrow_side.png",
+  "--prompt",
+  "Turn the person in these 3D character renders into a real photograph of the same person, keeping the face shape, nose, eyes, eyebrows, ears and skin tone: a 1984 government identification photograph, head and shoulders, facing the camera straight on, neutral closed-mouth expression, a woman aged 32 with light-brown skin and dark hair pulled back tightly into a braid, no cap, small earrings, wearing a plain khaki field shirt. Plain light-grey paper backdrop, flat direct on-camera flash with a faint shadow behind the head, black-and-white silver gelatin print, fine grain, slight softness, real skin pores and stubble. Photorealistic, not a 3D render, not a painting. No text, no numbers, no letters, no insignia, no name tapes, no badges, no border.",
+  "--aspect",
+  "3:4"
+ ],
+ [
+  "edit",
+  "IMG_TEAM_ID_PHOTOS",
+  "--tag",
+  "tinker_a",
+  "--src",
+  "RawAssets/wp09/IMG_TEAM_ID_PHOTOS/refs/Tinker_face.png",
+  "RawAssets/wp09/IMG_TEAM_ID_PHOTOS/refs/Tinker_side.png",
+  "--prompt",
+  "Turn the person in these 3D character renders into a real photograph of the same person, keeping the face shape, nose, eyes, eyebrows, ears and skin tone: a 1984 government identification photograph, head and shoulders, facing the camera straight on, neutral closed-mouth expression, a man aged 30 with short dark hair cut close at the sides and longer on top, clean-shaven, wearing a plain olive field shirt. Plain light-grey paper backdrop, flat direct on-camera flash with a faint shadow behind the head, black-and-white silver gelatin print, fine grain, slight softness, real skin pores and stubble. Photorealistic, not a 3D render, not a painting. No text, no numbers, no letters, no insignia, no name tapes, no badges, no border.",
+  "--aspect",
+  "3:4"
+ ],
+ [
+  "patina",
+  "TEX_ACOUSTIC_TILE",
+  "--tag",
+  "patina_t1",
+  "--seed",
+  "11",
+  "--prompt",
+  "1970s perforated mineral-fibre acoustic ceiling tiles, off-white, square 30 cm tiles with thin recessed seams, each tile covered in a regular grid of small round punched holes, faint yellow nicotine staining and grey grime, photographic, seamless"
+ ],
+ [
+  "patina",
+  "TEX_ACOUSTIC_TILE",
+  "--tag",
+  "patina_t2",
+  "--seed",
+  "23",
+  "--prompt",
+  "off-white perforated acoustic wall panels from a 1970s institutional interrogation room, uniform square grid of small round holes, faint water stains, nicotine yellowing and scuffs, photographic, seamless"
+ ],
+ [
+  "nb",
+  "IMG_INTEL_SCHEDULE",
+  "--tag",
+  "take_a",
+  "--aspect",
+  "1:1",
+  "--prompt",
+  "A 1984 Polaroid SX-70 instant photograph taken with a harsh on-camera flash in a dim radio room: a typed broadcast schedule sheet pinned with brass thumbtacks to a cork board next to the grey steel side of a 1960s teletype machine with a curl of yellow paper, the typed lines on the sheet are blurred and completely illegible, a few pencil tick marks in the margin, a coffee cup ring; hard flash falloff into darkness, slight cyan-green colour cast of aged instant film, soft corners, fine dust. No readable text, no letters, no logos."
+ ],
+ [
+  "nb",
+  "IMG_INTEL_SCHEDULE",
+  "--tag",
+  "take_b",
+  "--aspect",
+  "1:1",
+  "--prompt",
+  "A 1984 Polaroid SX-70 instant photograph with harsh on-camera flash: a close view of a cork notice board in a radio station, one typed schedule sheet with columns of blurred illegible typewritten lines pinned by four thumbtacks, next to it the edge of a grey teletype printer with paper feeding out, a red grease-pencil circle on the sheet; hard flash falloff into darkness, slight cyan-green colour cast of aged instant film, soft corners, fine dust. No readable text, no letters, no logos."
+ ],
+ [
+  "nb",
+  "IMG_INTEL_FILMLABEL",
+  "--tag",
+  "take_a",
+  "--aspect",
+  "1:1",
+  "--prompt",
+  "A 1984 Polaroid SX-70 instant close-up photograph with harsh on-camera flash: the lid of a dented grey metal 16 mm film can with a yellowed paper label taped across it, the label is blank apart from one empty typed underline, scratches and a fingerprint smudge on the metal, the can lying on a dark wooden table; hard flash falloff into darkness, slight cyan-green colour cast of aged instant film, soft corners, fine dust. The label is completely blank, no text, no letters, no numbers, no logos."
+ ],
+ [
+  "nb",
+  "IMG_INTEL_FILMLABEL",
+  "--tag",
+  "take_b",
+  "--aspect",
+  "1:1",
+  "--prompt",
+  "A 1984 Polaroid SX-70 instant photograph, harsh on-camera flash, looking down at a round grey metal 16 mm film can with a dented rim, a strip of yellowed masking-tape label across the lid with nothing written on it, a loose curl of film leader beside it on a dusty projection-room bench; hard flash falloff into darkness, slight cyan-green colour cast of aged instant film, soft corners, fine dust. The label is completely blank, no text, no letters, no numbers, no logos."
+ ],
+ [
+  "nb",
+  "FAL_ASHTRAY",
+  "--tag",
+  "ref_t1",
+  "--aspect",
+  "1:1"
+ ],
+ [
+  "nb",
+  "FAL_FILM_CAMERA",
+  "--tag",
+  "ref_t1",
+  "--aspect",
+  "3:4"
+ ],
+ [
+  "gptimg",
+  "UI_HUD_ICONS",
+  "--tag",
+  "gpt_t1",
+  "--size",
+  "1536x1024",
+  "--prompt",
+  "A sprite sheet of eight flat monochrome pure-white HUD icons on a fully transparent background, arranged in a clean 4 by 2 grid with generous empty space between them, each icon centred in its own cell and about the same size, simple bold military pictograms in one consistent style with a uniform thick stroke weight and solid fills, crisp hard edges, no gradients, no shadows, no glow, no colour: 1 a fragmentation hand grenade with its spoon and pull ring, 2 a closed document folder with a paper sheet corner showing, 3 a small handheld field radio with three curved radio waves, 4 three rifle cartridges standing side by side, 5 a single rifle cartridge standing upright, 6 an open right hand seen palm-on, 7 a wooden ammunition crate with rope handles seen in three-quarter view, 8 a pair of binoculars. No text, no letters, no numbers."
+ ],
+ [
+  "gptimg",
+  "UI_DAMAGE_VIGNETTE",
+  "--tag",
+  "gpt_t1",
+  "--size",
+  "1536x768",
+  "--prompt",
+  "A full-frame screen overlay texture for a first-person shooter damage effect on a transparent background: fine dust, grit and dirt specks and a few faint dark-red dried blood smears and fine spatter concentrated only along the extreme edges and in the corners of the frame, fading smoothly to completely clear transparent across the centre two thirds, photographic and restrained, no gore, no wounds, no text."
+ ],
+ [
+  "nb",
+  "VID_GUNCAM",
+  "--tag",
+  "still_t1",
+  "--aspect",
+  "4:3",
+  "--prompt",
+  "A single frame from a 1984 helicopter gun-camera recording: a rigid wide-angle camera mounted low on the left landing-skid strut of a sand-painted twin-blade utility helicopter in flight, looking forward and up along the fuselage so the open left cabin door fills the upper part of the frame, a pintle-mounted machine gun at the door and a crouched figure in deep shadow inside the dark cabin, the skid tube crossing the lower foreground, far below the flat rooftops of a sun-baked desert town at dusk racing past with motion blur. Black-and-white low-resolution video-tube image, blooming highlights, soft focus, no text, no numbers, no markings, no insignia, no flags."
+ ],
+ [
+  "raw",
+  "VID_HARROU_8MM",
+  "--tag",
+  "kling_t1",
+  "--endpoint",
+  "fal-ai/kling-video/v3/pro/image-to-video",
+  "--est",
+  "0.90",
+  "--args-json",
+  "{\"start_image_url\": \"@RawAssets/wp09/IMG_HARROU_STILL/take_a.png\", \"duration\": \"8\", \"generate_audio\": false, \"cfg_scale\": 0.5, \"prompt\": \"Faded Super 8 home-movie footage from the late 1970s. A handheld camera slowly pans right to follow the stocky man in the pale linen suit as he walks along the line of mercenaries in the sunlit square; the men stand at loose attention, shift their weight, one adjusts his beret, dust drifts. The man's face stays scratched out of the emulsion and unreadable for the whole shot. Film grain, gate weave, light flicker, one continuous shot, no cuts.\", \"negative_prompt\": \"blur, distortion, low quality, visible face of the man in the linen suit, text, subtitles, modern clothing, flags, cuts\"}"
+ ]
+]

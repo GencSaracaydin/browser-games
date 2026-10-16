@@ -1,0 +1,22 @@
+[
+ [
+  "3d",
+  "FAL_ASHTRAY",
+  "--tag",
+  "tripo_t2",
+  "--image",
+  "RawAssets/wp09/FAL_ASHTRAY/ref_t2.png",
+  "--faces",
+  "1600"
+ ],
+ [
+  "nb",
+  "FAL_FILM_CAMERA",
+  "--tag",
+  "ref_t2",
+  "--aspect",
+  "3:4",
+  "--prompt",
+  "Photorealistic studio product photograph of a 1970s black 16 mm spring-wound film camera with a turret of three chrome lenses, mounted on a tall wooden field tripod with a metal pan-and-tilt head and a long pan handle, the three wooden legs fully extended and spread wide, the camera at about eye height, the entire tripod from the feet on the floor up to the top of the camera visible in frame, 3/4 elevated view from the front-left, camera perpendicular, no perspective distortion, centered, filling about 90% of the frame height. Pure seamless white background, soft even diffuse studio lighting, minimal specular highlights, only a faint contact shadow, everything in sharp focus, museum catalog reference photo. No text, no lettering, no numbers, no markings, no logos, no serial numbers, no insignia, no flags, no hands, no other objects."
+ ]
+]

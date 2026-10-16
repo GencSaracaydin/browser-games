@@ -1,0 +1,34 @@
+[
+ [
+  "nb",
+  "FAL_ASHTRAY",
+  "--tag",
+  "ref_t2",
+  "--aspect",
+  "1:1",
+  "--prompt",
+  "Photorealistic studio product photograph of a heavy round 1970s ashtray in thick amber-brown pressed glass with three cigarette rests, a few crushed cigarette butts and grey ash inside, 3/4 elevated view from the front-left, camera perpendicular, no perspective distortion, entire object visible, centered, filling about 90% of the frame width. Pure seamless white background, soft even diffuse studio lighting, minimal specular highlights, only a faint contact shadow, everything in sharp focus, museum catalog reference photo. No text, no lettering, no numbers, no markings, no logos, no serial numbers, no insignia, no flags, no hands, no other objects."
+ ],
+ [
+  "3d",
+  "FAL_FILM_CAMERA",
+  "--tag",
+  "tripo_t1",
+  "--image",
+  "RawAssets/wp09/FAL_FILM_CAMERA/ref_t1.png",
+  "--faces",
+  "6000"
+ ],
+ [
+  "raw",
+  "VID_GUNCAM",
+  "--tag",
+  "kling_t1",
+  "--endpoint",
+  "fal-ai/kling-video/v3/pro/image-to-video",
+  "--est",
+  "1.35",
+  "--args-json",
+  "{\"start_image_url\": \"@RawAssets/wp09/VID_GUNCAM/still_t1.png\", \"duration\": \"12\", \"generate_audio\": false, \"cfg_scale\": 0.6, \"prompt\": \"Black-and-white 1980s helicopter gun-camera footage from a rigid camera fixed to the side of the helicopter. The helicopter flies fast and low over the desert town at dusk, the ground streaming past below. A rocket with a bright white smoke trail streaks up from the rooftops and passes just under the landing skid, the helicopter lurches and the camera shakes hard. A few seconds later one single bright muzzle flash lights up the inside of the dark cabin for an instant, then the cabin is dark again. The camera stays fixed to the helicopter for the whole shot, no cuts.\", \"negative_prompt\": \"blur, distortion, low quality, colour, text, subtitles, logos, flags, explosion of the helicopter, cuts\"}"
+ ]
+]

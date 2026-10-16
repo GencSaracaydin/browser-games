@@ -1,0 +1,27 @@
+{
+    "name": "LongShadow.Tests.EditMode.Audio",
+    "rootNamespace": "LongShadow.Tests.EditMode.Audio",
+    "references": [
+        "LongShadow.Core",
+        "LongShadow.Audio",
+        "LongShadow.Core.Editor",
+        "LongShadow.Audio.Editor",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

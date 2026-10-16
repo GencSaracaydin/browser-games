@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dedd4a76223d2405c986d7d136667739, type: 3}
+  m_Name: LIB_WeaponVisuals
+  m_EditorClassIdentifier: LongShadow.Combat::LongShadow.Combat.Data.WeaponVisualsLibrary
+  _entries:
+  - _id: COMMANDO
+    _viewmodel: {fileID: 5850092798188110501, guid: 2ec2c496a8d9c44c4b6ec969ab8722eb, type: 3}
+    _world: {fileID: 208439258554654405, guid: d6415e29d7e9549ee888493853d0cace, type: 3}
+    _magazineDrop: {fileID: 1506314337983525899, guid: 1918929b69edf4bd08a9c0e6a6d2da48, type: 3}
+    _pickup: {fileID: 5277043126239714415, guid: 207aaae6ace5a4895a12890b75e38931, type: 3}
+    _icon: {fileID: 0}
+    _hasArt: 0
+  - _id: HUSHPUPPY
+    _viewmodel: {fileID: 9196598877524714016, guid: ead995cf300d3453ea15585a46387bed, type: 3}
+    _world: {fileID: 4817700246969581500, guid: 748105a435d01408fbaae65cfe2df85f, type: 3}
+    _magazineDrop: {fileID: 1273434055625858156, guid: 3b00a987a8874458d9cc55e50de26770, type: 3}
+    _pickup: {fileID: 0}
+    _icon: {fileID: 0}
+    _hasArt: 0
+  - _id: AK
+    _viewmodel: {fileID: 5186173809712325280, guid: 14b9692d9994e4801852a6e951340e34, type: 3}
+    _world: {fileID: 4034334606111769034, guid: f665f6502a8af49a19a8c27be91882ec, type: 3}
+    _magazineDrop: {fileID: 3117568507301489595, guid: 30818823753dc4fdc83cdcce71b40c05, type: 3}
+    _pickup: {fileID: 5885726392456891939, guid: 16708ce118d5f4282b9857ef43907ad9, type: 3}
+    _icon: {fileID: 0}
+    _hasArt: 0
+  - _id: RPK
+    _viewmodel: {fileID: 8057488655903446875, guid: d413f517d067f4e91965eb58c0abab08, type: 3}
+    _world: {fileID: 7502463163470772968, guid: 27404a71e997945f491f42909f4234bd, type: 3}
+    _magazineDrop: {fileID: 6416600030186210880, guid: 20c5768d48d9440cbb7428e501f46e97, type: 3}
+    _pickup: {fileID: 8163601130027254440, guid: 244ea9f0b51524478b800a02901c53b8, type: 3}
+    _icon: {fileID: 0}
+    _hasArt: 0
+  - _id: M60D
+    _viewmodel: {fileID: 3247711094074354923, guid: 5b2fe4518b0804df899009ce26398710, type: 3}
+    _world: {fileID: 5702769771198748572, guid: 9f4c66d354a5d4a2b99bca74b0bb4521, type: 3}
+    _magazineDrop: {fileID: 0}
+    _pickup: {fileID: 0}
+    _icon: {fileID: 0}
+    _hasArt: 0
+  - _id: M67
+    _viewmodel: {fileID: 8854445378688040246, guid: 6aa48b65fb69844b38cc7097837c9136, type: 3}
+    _world: {fileID: 6012577597054460344, guid: 1953ace85a5544cb0b846bb4bc94f2c2, type: 3}
+    _magazineDrop: {fileID: 0}
+    _pickup: {fileID: 0}
+    _icon: {fileID: 0}
+    _hasArt: 0
+  - _id: KNIFE
+    _viewmodel: {fileID: 2642358458764001844, guid: 0761e5bd2dc5248099e0d01019e1f2e0, type: 3}
+    _world: {fileID: 0}
+    _magazineDrop: {fileID: 0}
+    _pickup: {fileID: 0}
+    _icon: {fileID: 0}
+    _hasArt: 0
+  - _id: AKMS
+    _viewmodel: {fileID: 0}
+    _world: {fileID: 5428394473655279886, guid: 3d116355afafe440dbee1c12c684273e, type: 3}
+    _magazineDrop: {fileID: 0}
+    _pickup: {fileID: 0}
+    _icon: {fileID: 0}
+    _hasArt: 0
+  - _id: SVD
+    _viewmodel: {fileID: 0}
+    _world: {fileID: 6888513615735906412, guid: 1af255dc3e69c4e739b2db7cf82ece60, type: 3}
+    _magazineDrop: {fileID: 0}
+    _pickup: {fileID: 0}
+    _icon: {fileID: 0}
+    _hasArt: 0
+  - _id: RPG7
+    _viewmodel: {fileID: 0}
+    _world: {fileID: 6180106004964030262, guid: 7d14a37f473e7428f88b83db3e665fdb, type: 3}
+    _magazineDrop: {fileID: 0}
+    _pickup: {fileID: 0}
+    _icon: {fileID: 0}
+    _hasArt: 0
+  - _id: DSHK
+    _viewmodel: {fileID: 0}
+    _world: {fileID: 8623933146620187645, guid: a4cb292c091634a589d8980fa125c2ea, type: 3}
+    _magazineDrop: {fileID: 0}
+    _pickup: {fileID: 0}
+    _icon: {fileID: 0}
+    _hasArt: 0
+  - _id: SMOKE_GRENADE
+    _viewmodel: {fileID: 0}
+    _world: {fileID: 6298030884505989812, guid: b4c37e152fdf540caa402ae80d90459a, type: 3}
+    _magazineDrop: {fileID: 0}
+    _pickup: {fileID: 0}
+    _icon: {fileID: 0}
+    _hasArt: 0

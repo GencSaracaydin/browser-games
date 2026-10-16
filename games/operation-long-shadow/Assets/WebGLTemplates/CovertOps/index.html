@@ -1,0 +1,404 @@
+<title>Operation Long Shadow</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+  /* CovertOps template (WP01, TECH_PLAN §7.1). A body fragment: the artifact host wraps the page in its own document
+     skeleton, so there is no html/head/body here and every script lives in the body (TECH_PLAN §12 R2). Single dark
+     look on purpose: the loader is a 1984 field terminal (GDD §8.1). */
+  :root {
+    --ls-ground: #020402;
+    --ls-phosphor: #8be38b;
+    --ls-phosphor-dim: #3f6b3f;
+    --ls-glow: rgba(139, 227, 139, 0.45);
+    --ls-alert: #e8a04a;
+    --ls-fault: #e0563b;
+    --ls-font: "Courier New", ui-monospace, Menlo, Consolas, monospace;
+    color-scheme: dark;
+  }
+  :root[data-theme="light"], :root[data-theme="dark"] { color-scheme: dark; }
+  @media (prefers-color-scheme: light) { :root:not([data-theme="light"]) { color-scheme: dark; } }
+  html, body { margin: 0; padding: 0; background: #000; overflow: hidden; }
+  body { background: #000; }
+  #ls-stage { position: fixed; inset: 0; background: #000; overflow: hidden; }
+  #unity-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; background: #000; outline: none;
+                  touch-action: none; -webkit-user-select: none; user-select: none; }
+  #ls-gate { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center;
+             background: radial-gradient(ellipse at 50% 45%, #061006 0%, var(--ls-ground) 62%, #000 100%);
+             color: var(--ls-phosphor); font-family: var(--ls-font); text-shadow: 0 0 6px var(--ls-glow);
+             cursor: progress; transition: opacity 0.35s ease; -webkit-user-select: none; user-select: none; }
+  #ls-gate.ls-ready { cursor: pointer; }
+  #ls-gate.ls-hidden { opacity: 0; pointer-events: none; }
+  #ls-gate::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+                     background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.32) 0 1px, transparent 1px 3px); }
+  #ls-gate::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+                    background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.75) 100%); }
+  .ls-crt { position: relative; z-index: 1; box-sizing: border-box; width: min(760px, 100%); padding: 0 16px;
+            font-size: clamp(12px, 1.55vw, 19px); line-height: 1.7; letter-spacing: 0.16em;
+            animation: ls-flicker 5.5s infinite steps(1); }
+  .ls-crt p { margin: 0 0 0.9em 0; }
+  .ls-head { opacity: 0.92; }
+  .ls-head .ls-sep { color: var(--ls-phosphor-dim); }
+  #ls-groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(6.4ch, 1fr)); gap: 0.2em 0.9em;
+               font-variant-numeric: tabular-nums; margin: 1.4em 0 1.6em 0; min-height: 3.4em; }
+  #ls-groups b { font-weight: normal; }
+  #ls-groups i { font-style: normal; color: var(--ls-phosphor-dim); text-shadow: none; }
+  .ls-status { font-size: 1.08em; }
+  .ls-cursor { display: inline-block; margin-left: 0.15em; animation: ls-blink 1.06s infinite steps(1); }
+  .ls-sub { color: var(--ls-phosphor-dim); text-shadow: none; font-size: 0.82em; min-height: 1.7em; }
+  .ls-foot { margin-top: 2.2em !important; font-size: 0.72em; color: var(--ls-phosphor-dim); text-shadow: none; }
+  #ls-gate.ls-ready:focus { outline: none; }
+  #ls-gate.ls-ready:focus-visible .ls-head { outline: 1px dotted var(--ls-phosphor-dim); outline-offset: 6px; }
+  #ls-error { border: 1px solid var(--ls-fault); color: var(--ls-fault); text-shadow: 0 0 5px rgba(224, 86, 59, 0.45);
+              padding: 0.8em 1em; margin: 1em 0; }
+  #ls-error pre { margin: 0.6em 0; white-space: pre-wrap; word-break: break-word; font: inherit; font-size: 0.8em;
+                  letter-spacing: 0.04em; max-height: 9em; overflow: auto; color: var(--ls-alert); }
+  #ls-error button { font: inherit; color: var(--ls-fault); background: transparent; border: 1px solid var(--ls-fault);
+                     padding: 0.3em 1em; cursor: pointer; letter-spacing: inherit; }
+  #ls-toast { position: absolute; z-index: 3; top: 12px; left: 50%; transform: translateX(-50%); max-width: min(760px, calc(100% - 32px));
+              box-sizing: border-box; padding: 6px 12px; font: 12px/1.5 var(--ls-font); letter-spacing: 0.08em;
+              color: var(--ls-alert); background: rgba(10, 8, 4, 0.88); border: 1px solid rgba(232, 160, 74, 0.6);
+              pointer-events: none; }
+  #ls-diag { position: absolute; z-index: 3; right: 10px; bottom: 10px; font: 11px var(--ls-font); color: var(--ls-phosphor);
+             background: rgba(0, 0, 0, 0.6); border: 1px solid var(--ls-phosphor-dim); padding: 3px 8px; cursor: pointer; }
+  [hidden] { display: none !important; }
+  @keyframes ls-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  @keyframes ls-flicker { 0%, 100% { opacity: 1; } 31% { opacity: 0.965; } 32% { opacity: 1; } 77% { opacity: 0.98; } 78% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .ls-crt, .ls-cursor { animation: none; }
+    #ls-gate { transition: none; }
+  }
+</style>
+#if SHOW_DIAGNOSTICS
+<link rel="stylesheet" href="<<<TemplateData/diagnostics.css>>>">
+<script src="<<<TemplateData/diagnostics.js>>>"></script>
+#endif
+
+<div id="ls-stage">
+  <canvas id="unity-canvas" tabindex="-1" aria-label="Operation Long Shadow"></canvas>
+  <div id="ls-gate" role="dialog" aria-modal="true" aria-labelledby="ls-status">
+    <div class="ls-crt">
+      <p class="ls-head">SESSION 12 <span class="ls-sep">//</span> SUBJECT S-3<span id="ls-cta" hidden> <span class="ls-sep">//</span> CLICK TO BEGIN</span><span class="ls-cursor" id="ls-head-cursor" aria-hidden="true" hidden>&#9608;</span></p>
+      <p id="ls-groups" aria-hidden="true"></p>
+      <p class="ls-status" id="ls-status-line" aria-live="polite"><span id="ls-status">ESTABLISHING LINK</span><span class="ls-cursor" aria-hidden="true">&#9608;</span></p>
+      <p class="ls-sub" id="ls-sub">RECEIVING ENGINE</p>
+      <div id="ls-error" role="alert" hidden>
+        <div id="ls-error-title">LINK FAILURE</div>
+        <pre id="ls-error-text"></pre>
+        <button id="ls-retry" type="button">RETRY</button>
+      </div>
+      <p class="ls-foot">HEADPHONES RECOMMENDED &middot; MOUSE + KEYBOARD &middot; ESC PAUSES</p>
+    </div>
+  </div>
+  <div id="ls-toast" role="status" hidden></div>
+#if SHOW_DIAGNOSTICS
+  <button id="ls-diag" type="button" hidden>DIAG</button>
+#endif
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  // ---- build constants. Unity fills the template variables below; LongShadow.Platform.Editor.WebBuild patches the
+  // LS:VARIANT marker ("qa" for Web QA builds) and Tools/build/publish_plan.py the LS:ASSET_SUFFIX / LS:SERVED_EXT
+  // markers in the publish mirror (the host refuses .unityweb/.bundle, so those files get a served suffix). ----------
+  window.LS_ASSET_SUFFIX = /*LS:ASSET_SUFFIX*/"";
+  window.LS_SERVED_EXT = /*LS:SERVED_EXT*/"";
+  window.LS_VARIANT = /*LS:VARIANT*/"release";
+  var DPR_CAP = 1.5;           // TECH_PLAN D21 / GDD §9.8
+  var ENGINE_SHARE = 0.6;      // share of the number groups for the engine download; the rest is the C# boot
+  var LINK_TIMEOUT_MS = 8000;  // no WebBridge after this long: plain content, the gate just hides on click
+  var GROUPS = 12;
+  var BUILD = {
+    loader: "Build/{{{ LOADER_FILENAME }}}",
+    data: "Build/{{{ DATA_FILENAME }}}",
+    framework: "Build/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_WASM
+    code: "Build/{{{ CODE_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+    symbols: "Build/{{{ SYMBOLS_FILENAME }}}",
+#endif
+    company: {{{ JSON.stringify(COMPANY_NAME) }}},
+    product: {{{ JSON.stringify(PRODUCT_NAME) }}},
+    version: {{{ JSON.stringify(PRODUCT_VERSION) }}}
+  };
+
+  var $ = function (id) { return document.getElementById(id); };
+  var stage = $('ls-stage'), canvas = $('unity-canvas'), gate = $('ls-gate'), groupsEl = $('ls-groups');
+  var statusEl = $('ls-status'), statusLine = $('ls-status-line'), subEl = $('ls-sub'), toastEl = $('ls-toast');
+  var ctaEl = $('ls-cta'), headCursor = $('ls-head-cursor');
+  var log = function (m) { if (window.console) console.log('[LS] ' + m); };
+
+  // ---- benign browser refusals (pointer lock / fullscreen / autoplay) never reach the loader's alert() ----------
+  var BENIGN = /WrongDocumentError|NotAllowedError|SecurityError|NotSupportedError|pointer ?lock|requestPointerLock|exitPointerLock|fullscreen|The user has exited the lock|play\(\) request was interrupted|AbortError/i;
+  function describe(r) {
+    if (!r) return '';
+    if (typeof r === 'string') return r;
+    return (r.name ? r.name + ': ' : '') + (r.message || String(r));
+  }
+  window.addEventListener('unhandledrejection', function (e) {
+    var s = describe(e.reason);
+    if (BENIGN.test(s)) { e.preventDefault(); if (e.stopImmediatePropagation) e.stopImmediatePropagation(); log('ignored: ' + s); }
+  });
+  window.addEventListener('error', function (e) {
+    var s = describe(e.error) || e.message || '';
+    if (BENIGN.test(s)) { e.preventDefault(); if (e.stopImmediatePropagation) e.stopImmediatePropagation(); log('ignored: ' + s); }
+  });
+
+  // ---- pointer lock: raw mouse first, plain lock as fallback, rejections always caught (webgl.md §6.5) ---------
+  (function wrapPointerLock() {
+    var proto = window.HTMLCanvasElement && HTMLCanvasElement.prototype;
+    if (!proto || !proto.requestPointerLock || proto.requestPointerLock.__ls) return;
+    var original = proto.requestPointerLock;
+    var swallow = function (e) { log('pointer lock refused: ' + describe(e)); };
+    var wrapped = function (options) {
+      var el = this, opts = options || { unadjustedMovement: true }, p;
+      try { p = original.call(el, opts); } catch (e) { try { p = original.call(el); } catch (e2) { swallow(e2); return Promise.resolve(); } }
+      if (!p || typeof p.then !== 'function') return Promise.resolve();
+      return p.then(null, function (err) {
+        if (opts && opts.unadjustedMovement && err && err.name === 'NotSupportedError') {
+          try { var p2 = original.call(el); return (p2 && p2.then) ? p2.then(null, swallow) : undefined; } catch (e3) { swallow(e3); return undefined; }
+        }
+        swallow(err);
+        return undefined;
+      });
+    };
+    wrapped.__ls = true;
+    proto.requestPointerLock = wrapped;
+  })();
+
+  canvas.addEventListener('contextmenu', function (e) { e.preventDefault(); });          // RMB = aim (GDD §12)
+  canvas.addEventListener('mousedown', function (e) { if (e.button === 1) e.preventDefault(); });
+
+  // ---- number groups (GDD §8.1: the loading progress is a row of number groups) ---------------------------------
+  var digits = [];
+  (function makeGroups() {
+    var seed = 19840612;
+    for (var i = 0; i < GROUPS; i++) {
+      var g = '';
+      for (var k = 0; k < 5; k++) { seed = (seed * 1103515245 + 12345) & 0x7fffffff; g += String(seed % 10); }
+      digits.push(g);
+    }
+    var html = '';
+    for (var j = 0; j < GROUPS; j++) html += '<span id="ls-g' + j + '"><i>&middot;&middot;&middot;&middot;&middot;</i></span>';
+    groupsEl.innerHTML = html;
+  })();
+  var revealed = 0;
+  function revealTo(n) {
+    n = Math.max(0, Math.min(GROUPS, n));
+    while (revealed < n) {
+      var el = $('ls-g' + revealed), text = digits[revealed];
+      if (el) typeGroup(el, text);
+      revealed++;
+    }
+  }
+  function typeGroup(el, text) {
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { el.innerHTML = '<b>' + text + '</b>'; return; }
+    var i = 0;
+    var step = function () {
+      i++;
+      el.innerHTML = '<b>' + text.slice(0, i) + '</b><i>' + '\u00b7\u00b7\u00b7\u00b7\u00b7'.slice(i) + '</i>';
+      if (i < text.length) setTimeout(step, 28);
+    };
+    step();
+  }
+
+  // ---- page API used by LongShadowWeb.jslib (window.LSPage) ------------------------------------------------------
+  var readyFlags = 0, engineLinked = false, linkTimer = 0, toastTimer = 0, instance = null;
+  var LSPage = window.LSPage = {
+    state: 'loading',          // loading -> booting -> ready -> running; or error
+    engineProgress: 0,
+    bootProgress: 0,
+    fallback: false,
+    unitySend: null, resumeAudio: null, requestLock: null, requestFullscreen: null,  // set by the jslib (LS_Init)
+
+    overall: function () {
+      return ENGINE_SHARE * this.engineProgress + (1 - ENGINE_SHARE) * this.bootProgress;
+    },
+    render: function (label) {
+      revealTo(Math.floor(this.overall() * GROUPS + 1e-6));
+      if (label !== undefined && this.state !== 'ready' && this.state !== 'error') subEl.textContent = label;
+    },
+    setEngineProgress: function (p) {
+      if (this.state === 'error') return;
+      this.engineProgress = Math.max(this.engineProgress, Math.min(1, +p || 0));
+      this.render(this.engineProgress < 1 ? 'RECEIVING ENGINE ' + Math.round(this.engineProgress * 100) + '%' : 'STARTING');
+    },
+    setBootProgress: function (p, label) {
+      if (this.state === 'error') return;
+      if (this.state === 'loading') this.state = 'booting';
+      this.engineProgress = 1;
+      this.bootProgress = Math.max(0, Math.min(1, +p || 0));
+      this.render(label || 'RECEIVING');
+    },
+    setReady: function (flags) {
+      if (this.state === 'error' || this.state === 'running') { readyFlags = flags | 0; return; }
+      readyFlags = flags | 0;
+      if (readyFlags & 1) {
+        this.state = 'ready';
+        this.engineProgress = 1; this.bootProgress = 1; this.render();
+        subEl.textContent = '';
+        showCta(true);
+      } else {
+        showCta(false);
+      }
+    },
+    setVisible: function (visible) {
+      if (visible) {
+        gate.hidden = false;
+        gate.classList.remove('ls-hidden');
+        if (this.state === 'running') this.state = 'booting';
+      } else {
+        gate.classList.add('ls-hidden');
+        setTimeout(function () { if (gate.classList.contains('ls-hidden')) gate.hidden = true; }, 400);
+      }
+    },
+    onEngineReady: function () {
+      engineLinked = true;
+      if (linkTimer) { clearTimeout(linkTimer); linkTimer = 0; }
+      log('engine linked');
+    },
+    fatal: function (message) {
+      this.state = 'error';
+      log('fatal: ' + message);
+      gate.hidden = false;
+      gate.classList.remove('ls-hidden');
+      showCta(false);
+      statusEl.textContent = 'TRANSMISSION FAULT';
+      subEl.textContent = '';
+      $('ls-error-text').textContent = String(message || 'Unknown error').replace(/<[^>]*>/g, ' ');
+      $('ls-error').hidden = false;
+    },
+    toast: function (message) {
+      toastEl.textContent = String(message || '').replace(/<[^>]*>/g, ' ').slice(0, 300);
+      toastEl.hidden = false;
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toastEl.hidden = true; }, 6000);
+    }
+  };
+
+  $('ls-retry').addEventListener('click', function () { window.location.reload(); });
+
+  // Ready state = the GDD §8.1 line with the cursor; the whole gate is the (keyboard-focusable) click target.
+  function showCta(on) {
+    ctaEl.hidden = !on;
+    headCursor.hidden = !on;
+    statusLine.hidden = on;
+    gate.classList.toggle('ls-ready', on);
+    if (on) {
+      gate.setAttribute('role', 'button');
+      gate.setAttribute('aria-label', 'Session 12, subject S-3: click to begin');
+      gate.tabIndex = 0;
+      try { gate.focus({ preventScroll: true }); } catch (e) {}
+    } else {
+      gate.setAttribute('role', 'dialog');
+      gate.removeAttribute('aria-label');
+      gate.removeAttribute('tabindex');
+    }
+  }
+
+  // ---- the click (GDD §8.1): unlock audio, pointer lock (raw first), optional fullscreen, then tell the engine -----
+  function begin(e) {
+    if (LSPage.state !== 'ready') return;
+    if (e && e.target && e.target.id === 'ls-retry') return;
+    if (e && e.preventDefault) e.preventDefault();
+    LSPage.state = 'running';
+    try { if (LSPage.resumeAudio) LSPage.resumeAudio(); } catch (err) {}
+    if (readyFlags & 4) { try { canvas.requestPointerLock(); } catch (err) {} }   // wrapped above: never throws/rejects
+    if (readyFlags & 2) {
+      try {
+        var fn = stage.requestFullscreen || stage.webkitRequestFullscreen;
+        if (fn) { var p = fn.call(stage); if (p && p.then) p.then(null, function () {}); }
+      } catch (err) {}
+    }
+    try { canvas.focus({ preventScroll: true }); } catch (err) {}
+    LSPage.setVisible(false);
+    if (LSPage.unitySend) LSPage.unitySend('OnHtmlGateClicked', '1');
+    log('gate clicked');
+  }
+  gate.addEventListener('pointerdown', begin);
+  gate.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') begin(e); });  // keydown is a user activation
+
+  // ---- environment checks before downloading ~10 MB ---------------------------------------------------------------
+  function webgl2() {
+    try { var c = document.createElement('canvas'); return !!(window.WebGL2RenderingContext && c.getContext('webgl2')); } catch (e) { return false; }
+  }
+  if (typeof WebAssembly !== 'object') { LSPage.fatal('This browser has no WebAssembly. Use a current Chrome, Edge, Firefox or Safari (16.4+).'); return; }
+  if (!webgl2()) { LSPage.fatal('WebGL 2 is not available. Enable hardware acceleration or use a current desktop browser.'); return; }
+  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) LSPage.toast('Desktop browser with mouse and keyboard required.');
+
+  // ---- engine ----------------------------------------------------------------------------------------------------
+  var config = {
+    arguments: [],
+    dataUrl: BUILD.data,
+    frameworkUrl: BUILD.framework,
+    codeUrl: BUILD.code,
+    streamingAssetsUrl: 'StreamingAssets',
+    companyName: BUILD.company,
+    productName: BUILD.product,
+    productVersion: BUILD.version,
+    devicePixelRatio: Math.min(window.devicePixelRatio || 1, DPR_CAP),
+    showBanner: function (msg, type) {
+      if (type === 'error') LSPage.toast(msg);
+      else log('unity ' + (type || 'info') + ': ' + msg);
+    },
+    // Never alert(): browser refusals are ignored, real errors go to the CRT panel (before start) or a toast.
+    errorHandler: function (err, url, line) {
+      var s = describe(err);
+      if (BENIGN.test(s)) { log('ignored: ' + s); return true; }
+      var where = url ? ' (' + String(url).split('/').pop() + (line ? ':' + line : '') + ')' : '';
+      if (LSPage.state === 'running' && !/RuntimeError|out of memory|unreachable|Aborted/i.test(s)) LSPage.toast(s + where);
+      else LSPage.fatal(s + where);
+      return true;
+    }
+  };
+  if (BUILD.symbols) config.symbolsUrl = BUILD.symbols;
+
+  // Keep the DPR cap when the window moves between screens.
+  if (window.matchMedia) {
+    var watchDpr = function () {
+      var mq = window.matchMedia('(resolution: ' + (window.devicePixelRatio || 1) + 'dppx)');
+      var onChange = function () {
+        try { if (instance && instance.Module) instance.Module.devicePixelRatio = Math.min(window.devicePixelRatio || 1, DPR_CAP); } catch (e) {}
+        watchDpr();
+      };
+      if (mq.addEventListener) mq.addEventListener('change', onChange, { once: true });
+    };
+    watchDpr();
+  }
+
+  var script = document.createElement('script');
+  script.src = BUILD.loader;
+  script.onerror = function () { LSPage.fatal('Could not load ' + BUILD.loader); };
+  script.onload = function () {
+    if (typeof createUnityInstance !== 'function') { LSPage.fatal('The loader did not define createUnityInstance.'); return; }
+    createUnityInstance(canvas, config, function (p) { LSPage.setEngineProgress(p); }).then(function (inst) {
+      instance = inst;
+      window.unityInstance = inst;
+      if (LSPage.state === 'loading') { LSPage.state = 'booting'; LSPage.setEngineProgress(1); }
+      log('RUNNING');
+#if SHOW_DIAGNOSTICS
+      var diag = $('ls-diag');
+      if (diag && window.unityDiagnostics) {
+        diag.hidden = false;
+        diag.addEventListener('click', function () { unityDiagnostics.openDiagnosticsDiv(inst.GetMetricsInfo); });
+      }
+#endif
+      if (!engineLinked) {
+        linkTimer = setTimeout(function () {
+          if (engineLinked || LSPage.state !== 'booting') return;
+          LSPage.fallback = true;   // content without WebBridge: the gate only hides on click
+          log('no WebBridge link; plain gate');
+          LSPage.setReady(1 | 4);
+        }, LINK_TIMEOUT_MS);
+      }
+    }).catch(function (message) {
+      LSPage.fatal(describe(message));
+    });
+  };
+  document.body.appendChild(script);
+})();
+</script>

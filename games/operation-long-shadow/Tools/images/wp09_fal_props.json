@@ -1,0 +1,87 @@
+{
+ "_comment": "WP09 fal booth props for Tools/images/wp09_prop.py (same keys as Tools/mesh/props/wp10fal_assets.json): name -> SM_<name>, kind/folder -> Art/Models/<kind>/<folder>/, size [mode, metres], tris = LOD0 budget, tex = in-game max size, tex_src = written size.",
+ "FAL_SCRAMBLER_BOX": {
+  "name": "ScramblerBox",
+  "kind": "Props",
+  "folder": "scrambler_box",
+  "size": [
+   "length",
+   0.36
+  ],
+  "tris": 3000,
+  "tex": 1024,
+  "tex_src": 1024
+ },
+ "FAL_INTERROGATION_CHAIR": {
+  "name": "InterrogationChair",
+  "kind": "Props",
+  "folder": "interrogation_chair",
+  "size": [
+   "height",
+   0.95
+  ],
+  "tris": 5000,
+  "tex": 1024,
+  "tex_src": 1024
+ },
+ "FAL_ROTARY_PHONE": {
+  "name": "RotaryPhone",
+  "kind": "Props",
+  "folder": "rotary_phone",
+  "size": [
+   "height",
+   0.155
+  ],
+  "tris": 2000,
+  "tex": 512,
+  "tex_src": 1024
+ },
+ "FAL_REEL_TO_REEL": {
+  "name": "ReelToReel",
+  "kind": "Props",
+  "folder": "reel_to_reel",
+  "size": [
+   "length",
+   0.44
+  ],
+  "tris": 3400,
+  "tex": 1024,
+  "tex_src": 1024
+ },
+ "FAL_AV_CART": {
+  "name": "AVCart",
+  "kind": "Props",
+  "folder": "av_cart",
+  "size": [
+   "length",
+   1.7
+  ],
+  "tris": 2000,
+  "tex": 512,
+  "tex_src": 1024
+ },
+ "FAL_ASHTRAY": {
+  "name": "Ashtray",
+  "kind": "Props",
+  "folder": "ashtray",
+  "size": [
+   "length",
+   0.15
+  ],
+  "tris": 800,
+  "tex": 512,
+  "tex_src": 512
+ },
+ "FAL_FILM_CAMERA": {
+  "name": "FilmCamera16mm",
+  "kind": "Props",
+  "folder": "film_camera",
+  "size": [
+   "height",
+   1.95
+  ],
+  "tris": 3000,
+  "tex": 512,
+  "tex_src": 1024
+ }
+}

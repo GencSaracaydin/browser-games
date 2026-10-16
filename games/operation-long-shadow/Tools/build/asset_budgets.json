@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared asset budget data (TECH_PLAN §3.10-3.12, §8.9, §8.10). Read by the Unity import rules (LongShadow.Core.Editor.ImportBudgetsFile -> TextureBudgets/ModelRules) and by Tools/build/validate_assets.py, so both use the same lists. Owner: WP00 (later WP11). After an edit run LongShadow/Import/Reapply Rules (All Game Assets) in the editor. Folder names are the asset folders below Art/Textures/<Kind>/ or Art/Models/<Kind>/ (case-insensitive).",
+  "version": 1,
+
+  "texture": {
+    "_comment": "Code-side lists for the §8.9 rows a manifest 'budget' text cannot express. The manifest budget of the folder wins where it states a size, except folder_caps (explicit overrides, logged in Docs/DECISIONS.md).",
+    "hero_env_sets": ["sand_01", "painted_plaster_wall", "PaintedPlaster012", "concrete_floor_worn_001"],
+    "ground_env_sets": [
+      "sand_01", "aerial_sand", "dry_ground_rocks", "rocky_trail_02", "gravelly_sand", "Ground097", "road_damaged",
+      "mud_cracked_dry_03", "saltcrust", "stone_paving", "Rocks017", "concrete_floor_worn_001", "floor_tiles_08",
+      "terrazzo_tiles", "Terrazzo003", "old_linoleum_flooring_01", "cinema_carpet", "brown_planks_03", "Concrete042B"
+    ],
+    "hero_props": [
+      "Television_01", "television_02", "binoculars", "filmstrip_projector_8mm", "scrambler_box", "interrogation_chair",
+      "reel_to_reel", "tube_rack", "wall_safe", "prc77", "teletype", "large_iron_gate", "rock_face_01"
+    ],
+    "fp_weapons": ["Commando", "HushPuppy", "AK", "RPK", "M60D"],
+    "small_fp_weapons": ["M67", "Knife"],
+    "tiny_weapons": ["Smoke", "Casings"],
+    "squad_characters": ["Calder", "CalderBooth", "CalderReel", "Hollis", "Sparrow", "Tinker", "Harrou", "Fallback"],
+    "hero_heads": ["Hollis"],
+    "minor_characters": ["LegionA", "LegionB", "LegionC", "GreycoatA", "GreycoatB", "Interrogator", "Magpie"],
+    "folder_caps": {
+      "Decals/poster_art": 2048
+    },
+    "impostor_cap": 256,
+    "fx_cap": 1024,
+    "emissive_cap": 512
+  },
+
+  "model": {
+    "_comment": "Static props that are lightmapped (D8: big props) get generated lightmap UVs; any file whose name has the token _LM does too.",
+    "lightmapped_props": ["covered_car", "namaqualand_boulder_04", "rock_face_01"],
+    "tris_tolerance_error": 1.25,
+    "class_tris": {
+      "_comment": "LOD0 triangle caps per class (§8.9) used when the manifest budget of the folder gives no number.",
+      "fp_weapon": 20000,
+      "fp_magazine": 3000,
+      "world_weapon": 7000,
+      "small_fp_item": 3000,
+      "squad_character": 15000,
+      "calder": 15400,
+      "enemy_character": 15000,
+      "character_prop": 3000,
+      "small_prop": 2000,
+      "prop": 8000,
+      "vehicle": 15000,
+      "tree": 8000,
+      "backdrop": 150000
+    }
+  },
+
+  "audio": {
+    "_comment": "Source checks (§8.9) and the WebGL download estimate. Unity 6000.6 encodes every clip as AAC at 44.1 kHz for WebGL (sample-rate overrides and WebGL platform overrides are not applied; measured 2026-10-16), so the estimate uses 44.1 kHz and the import quality. aac_kbps_per_channel is an assumption until WP11 measures the build report.",
+    "one_shot_groups": ["Weapons", "Impacts", "Foley", "Footsteps", "Explosions", "Whizz", "Synth"],
+    "loop_groups": ["SetPieces", "Vehicles"],
+    "other_sfx_groups": ["UI"],
+    "narrow_vo_chains": ["RADIO", "INTERCOM", "HF_AM", "GREYCOAT_SQUELCH", "PA_HORN"],
+    "wide_vo_chains": ["DRY", "FAR", "SCRAMBLER", "TAPE", "CLEAN", "BOOTH", "ROOM_SPEAKER"],
+    "one_shot_max_seconds": 2.0,
+    "one_shot_long_names": ["RELOAD", "MECH", "DRAW", "HOLSTER", "INSPECT", "TAIL", "DEBRIS", "COLLAPSE", "RATTLE", "SEQ", "CHAMBER", "LINK", "BELT", "DRAG", "SCRAPE", "CREAK"],
+    "music_seconds": [1.0, 95.0],
+    "ambience_seconds": [8.0, 35.0],
+    "vo_line_max_seconds": 30.0,
+    "aac_kbps_per_channel": { "50": 56, "60": 64, "70": 80 },
+    "webgl_sample_rate": 44100
+  },
+
+  "download": {
+    "_comment": "Download estimate (§8.9 measured basis: a Crunch q50 BC+N+M set ~0.87 MB at 1024 incl. mips) and the §8.10 budget lines in MB. Everything in Assets/_Game that is not editor-only is counted, so the total is an upper bound until WP11's BudgetReport reads the real build.",
+    "bytes_per_pixel_with_mips": {
+      "DXT1Crunched": 0.124,
+      "DXT5Crunched": 0.249,
+      "DXT1": 0.667,
+      "DXT5": 1.333,
+      "RGBA32": 5.333,
+      "RGB24": 4.0,
+      "R16": 2.667,
+      "RGBAHalf": 10.667
+    },
+    "crunch_quality_factor": { "base_quality": 50, "per_quality_point": 0.005 },
+    "mesh_bytes_per_tri": { "Medium": 20, "Off": 32 },
+    "budget_mb": {
+      "Environment textures": 45,
+      "Props": 28,
+      "Vehicles": 6,
+      "Weapons": 19,
+      "Characters": 24,
+      "Animation": 6,
+      "Audio": 18,
+      "Images and video": 8,
+      "Shared shaders + UI + FX textures": 6,
+      "Kit, buildings, terrain, far proxies": 14
+    },
+    "total_planned_mb": 220,
+    "total_hard_cap_mb": 230
+  }
+}

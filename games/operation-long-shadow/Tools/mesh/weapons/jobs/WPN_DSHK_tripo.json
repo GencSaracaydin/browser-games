@@ -1,0 +1,84 @@
+{
+ "id": "WPN_DSHK",
+ "name": "DShK",
+ "folder": "DShK",
+ "length": 1.6,
+ "body": "RawAssets/wp03/WPN_DSHK/tripo_take1/00_33B21ijX7T9mgtL35edAT_model.glb",
+ "body_take": "tripo_take1 (Tripo P2 from ref_left_b, face_limit 8000); ref_left_b has no gun shield (the shield in ref_left was malformed)",
+ "work": "RawAssets/wp03/WPN_DSHK/build",
+ "left_img": "RawAssets/wp03/WPN_DSHK/ref_left_b",
+ "sockets_img": {
+  "Muzzle": [
+   100,
+   636
+  ],
+  "Pivot": [
+   1607,
+   779
+  ],
+  "Base": [
+   1600,
+   1286
+  ],
+  "Grip": [
+   2580,
+   680
+  ],
+  "LeftHand": [
+   2580,
+   680
+  ],
+  "SightFront": [
+   550,
+   500
+  ],
+  "SightRear": [
+   2280,
+   560
+  ]
+ },
+ "sockets_dx": {
+  "Grip": -0.055,
+  "LeftHand": 0.055
+ },
+ "pivot": "Pivot",
+ "split": [
+  {
+   "name": "Mount",
+   "box_img": [
+    1470,
+    800,
+    1760,
+    1300
+   ],
+   "tris": 900,
+   "origin_img": [
+    1607,
+    779
+   ]
+  }
+ ],
+ "world": {
+  "tris": 8000,
+  "lods": [
+   0.5,
+   0.22
+  ],
+  "ao_size": 1024,
+  "sockets": [
+   "Muzzle",
+   "Grip",
+   "LeftHand",
+   "Base",
+   "SightRear"
+  ]
+ },
+ "ao_distance": 0.06,
+ "tex": {
+  "project_metal": 0.75,
+  "grade_metal": "smooth=0.42,metal=0.6"
+ },
+ "review": {
+  "tag": "tripo"
+ }
+}

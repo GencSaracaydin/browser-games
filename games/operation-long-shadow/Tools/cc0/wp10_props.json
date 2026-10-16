@@ -1,0 +1,384 @@
+{
+ "_comment": "WP10_CC0 Poly Haven prop jobs for Tools/cc0/wp10_ph_model.py. tris = LOD0 target for the whole output (rule: manifest budget, but never more than a 50% cut unless 'bake'; small <=0.6 m props capped toward 2k, medium/large toward 8k, hero props keep the manifest number). tex = in-game texture size. lods = ratios of LOD0. parts = separately pivoted children (articulated). variants = separate FBX files from one source. pivot: origin (Poly Haven origin) | bottom (bbox bottom centre) | top (bbox top centre).",
+ "PH_METAL_OFFICE_DESK": {
+  "name": "MetalOfficeDesk",
+  "tris": 6898,
+  "tex": 512
+ },
+ "PH_FILMSTRIP_PROJECTOR_8MM": {
+  "name": "Projector16mm",
+  "tris": 16349,
+  "tex": 1024,
+  "scale": 1.3,
+  "lods": [
+   1
+  ],
+  "parts": {
+   "ReelFeed": [
+    "filmstrip_projector_8mm_spool_feed",
+    "filmstrip_projector_8mm_film",
+    "filmstrip_projector_8mm_01_film_side"
+   ],
+   "ReelTakeup": [
+    "filmstrip_projector_8mm_spool_takeup"
+   ]
+  },
+  "part_pivot": "center",
+  "note": "8 mm filmstrip projector scaled x1.3 to read as a 16 mm portable projector; feed and take-up reels are separate children pivoted on their axles (spin them about local X)."
+ },
+ "PH_PROJECTOR_SCREEN": {
+  "name": "ProjectorScreen",
+  "tris": 8727,
+  "tex": 512
+ },
+ "PH_HANGING_INDUSTRIAL_LAMP": {
+  "name": "HangingIndustrialLamp",
+  "tris": 8000,
+  "tex": 512
+ },
+ "PH_BINOCULARS": {
+  "name": "Binoculars",
+  "tris": 9624,
+  "tex": 1024,
+  "lods": [
+   1
+  ],
+  "parts": {
+   "Strap": [
+    "binoculars_strap"
+   ]
+  },
+  "part_pivot": "origin",
+  "note": "FP view-model prop (Viewmodel layer); strap is a separate child so it can be hidden."
+ },
+ "PH_CASSETTE_PLAYER": {
+  "name": "CassettePlayer",
+  "tris": 2415,
+  "tex": 512
+ },
+ "PH_BARREL_01": {
+  "name": "Barrel01",
+  "tris": 2682,
+  "tex": 512,
+  "skins": [
+   "oxide_green",
+   "oxide_grey"
+  ],
+  "no_default_skin": true
+ },
+ "PH_BARREL_03": {
+  "name": "Barrel03",
+  "tris": 1473,
+  "tex": 512
+ },
+ "PH_WOODEN_CRATE_01": {
+  "name": "WoodenCrate01",
+  "tris": 6576,
+  "tex": 512
+ },
+ "PH_WOODEN_CRATE_02": {
+  "name": "WoodenCrate02",
+  "tris": 5176,
+  "tex": 512
+ },
+ "PH_OLD_MILITARY_CRATE": {
+  "name": "OldMilitaryCrate",
+  "tris": 5238,
+  "tex": 512,
+  "pivot": "bottom",
+  "variants": {
+   "A": [
+    "_a"
+   ],
+   "B": [
+    "_b"
+   ]
+  },
+  "note": "Source holds two crates: A (closed lid) and B (lid open); exported as separate FBX, shared material."
+ },
+ "PH_AMMO_BOX": {
+  "name": "AmmoBox",
+  "tris": 2191,
+  "tex": 512
+ },
+ "PH_METAL_JERRYCAN_GREEN": {
+  "name": "MetalJerrycanGreen",
+  "tris": 4818,
+  "tex": 512
+ },
+ "PH_PORTABLE_GENERATOR": {
+  "name": "PortableGenerator",
+  "tris": 13210,
+  "tex": 512
+ },
+ "PH_SECURITY_LIGHT": {
+  "name": "SecurityLight",
+  "tris": 4668,
+  "tex": 512,
+  "lods": [
+   1,
+   0.5
+  ],
+  "parts": {
+   "Glass": [
+    "security_light_glass"
+   ]
+  },
+  "part_pivot": "origin",
+  "note": "Floodlight head; glass is a separate child for the destructible swap."
+ },
+ "PH_PORTABLE_SEARCHLIGHT": {
+  "name": "PortableSearchlight",
+  "tris": 9401,
+  "tex": 512
+ },
+ "PH_LARGE_IRON_GATE": {
+  "name": "LargeIronGate",
+  "tris": 19070,
+  "tex": 1024,
+  "lods": [
+   1
+  ],
+  "parts": {
+   "LeafLeft": [
+    "large_iron_gate_left_door"
+   ],
+   "LeafRight": [
+    "large_iron_gate_right_door"
+   ],
+   "Bolt": [
+    "large_iron_gate_bolt"
+   ]
+  },
+  "part_pivot": "hinge",
+  "note": "Double gate: leaves pivot on their hinge edges (rotate about local Y), bolt separate."
+ },
+ "PH_WOODEN_LADDER": {
+  "name": "WoodenStepLadder",
+  "tris": 8492,
+  "tex": 512,
+  "extra": "straight_ladder",
+  "note": "Poly Haven asset is an A-frame step-ladder (1.33 m): roof dressing only. Ladder L uses SM_WoodenLadderStraight (procedural 3.6 m ladder on the same texture set)."
+ },
+ "PH_ROLLERSHUTTER_DOOR": {
+  "name": "RollershutterDoor",
+  "tris": 1104,
+  "tex": 512,
+  "drop": [
+   "graffiti"
+  ]
+ },
+ "PH_ROLLERSHUTTER_WINDOW_01": {
+  "name": "RollershutterWindow01",
+  "tris": 1104,
+  "tex": 512,
+  "drop": [
+   "graffiti"
+  ]
+ },
+ "PH_CONCRETE_ROAD_BARRIER_02": {
+  "name": "ConcreteRoadBarrier02",
+  "tris": 11911,
+  "tex": 512
+ },
+ "PH_UTILITY_BOX_01": {
+  "name": "UtilityBox01",
+  "tris": 4404,
+  "tex": 512
+ },
+ "PH_METAL_TRASH_CAN": {
+  "name": "MetalTrashCan",
+  "tris": 6980,
+  "tex": 512,
+  "pivot": "bottom",
+  "variants": {
+   "Clean": [
+    "metal_trash_can_handle_left",
+    "metal_trash_can_lid",
+    "metal_trash_can",
+    "metal_trash_can_handle_right"
+   ],
+   "Rust": [
+    "_rust"
+   ]
+  },
+  "exact_names": true
+ },
+ "PH_TRASHBAG": {
+  "name": "Trashbag",
+  "tris": 2241,
+  "tex": 512
+ },
+ "PH_COVERED_CAR": {
+  "name": "CoveredCar",
+  "tris": 8000,
+  "tex": 512,
+  "lm": true
+ },
+ "PH_OLD_TYRE": {
+  "name": "OldTyre",
+  "tris": 2000,
+  "tex": 512
+ },
+ "PH_PROPANE_TANK": {
+  "name": "PropaneTank",
+  "tris": 2619,
+  "tex": 512
+ },
+ "PH_VINTAGE_RADIO_TRANSCEIVER": {
+  "name": "VintageRadioTransceiver",
+  "tris": 21175,
+  "tex": 512
+ },
+ "PH_CAGED_HANGING_LIGHT": {
+  "name": "CagedHangingLight",
+  "tris": 11446,
+  "tex": 512
+ },
+ "PH_DESK_LAMP_ARM_01": {
+  "name": "DeskLampArm01",
+  "tris": 12051,
+  "tex": 512
+ },
+ "PH_CEILING_FAN": {
+  "name": "CeilingFan",
+  "tris": 8178,
+  "tex": 512,
+  "lods": [
+   1
+  ],
+  "parts": {
+   "Blades": [
+    "ceiling_fan_blades"
+   ]
+  },
+  "part_pivot": "origin",
+  "note": "Blades are a separate child on the motor axis: spin about local Y."
+ },
+ "PH_STEEL_FRAME_SHELVES_01": {
+  "name": "SteelFrameShelves01",
+  "tris": 4348,
+  "tex": 512,
+  "scale": 0.1,
+  "note": "Source mesh is authored 10x too large (Poly Haven metadata says 1.10 x 0.50 x 2.14 m): scaled x0.1."
+ },
+ "PH_DRAWER_CABINET": {
+  "name": "VintageWoodenDrawer01",
+  "asset": "vintage_wooden_drawer_01",
+  "src": "_alt_vintage_wooden_drawer_01",
+  "src_fbx": true,
+  "tris": 5184,
+  "tex": 512,
+  "note": "Replaces drawer_cabinet (a 2010s loft shelf) with Poly Haven vintage_wooden_drawer_01 (6-drawer wooden filing cabinet): period-correct archive furniture."
+ },
+ "PH_OFFICE_NOTEPADS": {
+  "name": "OfficeNotepads",
+  "tris": 666,
+  "tex": 512,
+  "items": true,
+  "lods": [
+   1
+  ],
+  "note": "Separate children per item (pads, stacks, sheets), each pivoted at its bottom centre; not LODs."
+ },
+ "PH_CLIPBOARD": {
+  "name": "Clipboard",
+  "tris": 3088,
+  "tex": 512
+ },
+ "PH_WOODENCHAIR_01": {
+  "name": "PaintedWoodenChair02",
+  "asset": "painted_wooden_chair_02",
+  "src": "_alt_painted_wooden_chair_02",
+  "tris": 1246,
+  "tex": 512,
+  "note": "Replaces WoodenChair_01 (a 2.27 m Gothic throne with pointed tracery: religious/church look, GDD 2.3-2) with Poly Haven painted_wooden_chair_02, a worn painted ladder-back cafe chair."
+ },
+ "PH_PAINTED_WOODEN_TABLE": {
+  "name": "PaintedWoodenTable",
+  "tris": 600,
+  "tex": 512
+ },
+ "PH_WOODEN_TABLE_02": {
+  "name": "WoodenTable02",
+  "tris": 196,
+  "tex": 512
+ },
+ "PH_METAL_STOOL_01": {
+  "name": "MetalStool01",
+  "tris": 4167,
+  "tex": 512
+ },
+ "PH_METAL_JUG": {
+  "name": "MetalJug",
+  "tris": 3020,
+  "tex": 512
+ },
+ "PH_WICKER_BASKET_01": {
+  "name": "WickerBasket01",
+  "tris": 11138,
+  "tex": 512
+ },
+ "PH_OLD_GAS_MASK": {
+  "name": "OldGasMask",
+  "tris": 9450,
+  "tex": 512
+ },
+ "PH_ROCK_07": {
+  "name": "Rock07",
+  "tris": 13915,
+  "tex": 512,
+  "smooth_scale": 0.4,
+  "note": "Real-world scan size 0.32 m (Poly Haven); used as scalable ridge/wadi rock: uniform scale 3-10 is fine. Source roughness (wet-looking 0.30) raised: smoothness x0.4 for dry desert stone."
+ },
+ "PH_ROCK_09": {
+  "name": "Rock09",
+  "tris": 11640,
+  "tex": 512,
+  "smooth_scale": 0.5,
+  "note": "Real-world scan size 0.15 m (Poly Haven); used as scalable ridge/wadi rock: uniform scale 4-15 is fine. Smoothness x0.5 for dry desert stone."
+ },
+ "PH_ROCK_FACE_01": {
+  "name": "RockFace01",
+  "tris": 10087,
+  "tex": 1024,
+  "lm": true,
+  "devegetate": true,
+  "note": "Green moss patches re-tinted to the surrounding rock colour (arid ridge)."
+ },
+ "PH_NAMAQUALAND_BOULDER_04": {
+  "name": "NamaqualandBoulder04",
+  "tris": 8000,
+  "tex": 512,
+  "bake": true,
+  "lm": true,
+  "note": "59k-tri scan decimated to 8k with normal/colour/mask re-baked from the full mesh (Cycles) onto fresh UVs."
+ },
+ "PH_DRY_BRANCHES_MEDIUM_01": {
+  "name": "DryBranchesMedium01",
+  "tris": 2800,
+  "tex": 512,
+  "pivot": "bottom",
+  "variants": {
+   "A": [
+    "_a"
+   ],
+   "B": [
+    "_b"
+   ],
+   "C": [
+    "_c"
+   ]
+  },
+  "note": "Three separate branches, one FBX each; tris is per branch. Green moss/lichen re-tinted to the local bark colour (arid setting).",
+  "devegetate": true
+ },
+ "PH_DEAD_TREE_TRUNK": {
+  "name": "DeadTreeTrunk",
+  "tris": 8000,
+  "tex": 512,
+  "bake": true,
+  "note": "101k-tri scan of a fallen 3 m trunk decimated to 8k with re-baked maps. It is a lying log, not a standing snag. Green moss/lichen re-tinted to the local bark colour (arid setting).",
+  "devegetate": true
+ }
+}

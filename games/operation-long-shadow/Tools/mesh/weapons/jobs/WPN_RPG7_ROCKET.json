@@ -1,0 +1,46 @@
+{
+ "id": "WPN_RPG7_ROCKET",
+ "name": "RPG7_Rocket",
+ "folder": "RPG7",
+ "length": 0.95,
+ "body": "RawAssets/wp03/WPN_RPG7_ROCKET/tripo_take1/00_et9Ahkg4eA4d0p99xnhj4_model.glb",
+ "body_take": "tripo_take1 (Tripo P2 from ref_left, face_limit 1500)",
+ "work": "RawAssets/wp03/WPN_RPG7_ROCKET/build",
+ "left_img": "RawAssets/wp03/WPN_RPG7_ROCKET/ref_left",
+ "mirror_right": true,
+ "sockets_img": {
+  "Nose": [
+   231,
+   784
+  ],
+  "Tail": [
+   2628,
+   784
+  ]
+ },
+ "pivot": "origin",
+ "world": {
+  "tris": 1500,
+  "lods": [
+   0.5
+  ],
+  "ao_size": 512,
+  "sockets": [
+   "Nose",
+   "Tail"
+  ]
+ },
+ "ao_distance": 0.03,
+ "tex": {
+  "bc": 512,
+  "n": 512,
+  "m": 512,
+  "project_metal": 0.8,
+  "grade_metal": "smooth=0.42",
+  "smooth_max": 0.5,
+  "dehighlight": 0.5
+ },
+ "review": {},
+ "cross_section_m": 0.093,
+ "proj": true
+}

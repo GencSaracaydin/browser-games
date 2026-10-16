@@ -1,0 +1,30 @@
+{
+    "name": "LongShadow.Tests.EditMode.Combat",
+    "rootNamespace": "LongShadow.Tests.EditMode.Combat",
+    "references": [
+        "LongShadow.Core",
+        "LongShadow.Combat",
+        "LongShadow.Core.Editor",
+        "LongShadow.Combat.Editor",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.RenderPipelines.Universal.Editor",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

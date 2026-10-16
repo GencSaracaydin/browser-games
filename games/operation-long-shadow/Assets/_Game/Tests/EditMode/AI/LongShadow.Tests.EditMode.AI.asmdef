@@ -1,0 +1,32 @@
+{
+    "name": "LongShadow.Tests.EditMode.AI",
+    "rootNamespace": "LongShadow.Tests.EditMode.AI",
+    "references": [
+        "LongShadow.Core",
+        "LongShadow.AI",
+        "LongShadow.Core.Editor",
+        "LongShadow.AI.Editor",
+        "Unity.AI.Navigation",
+        "Unity.AI.Navigation.Editor",
+        "Unity.Splines",
+        "Unity.Mathematics",
+        "Unity.Splines.Editor",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

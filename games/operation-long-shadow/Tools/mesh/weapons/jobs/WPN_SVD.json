@@ -1,0 +1,14 @@
+{
+ "id": "WPN_SVD", "name": "SVD", "folder": "SVD", "length": 1.22,
+ "body": "RawAssets/wp03/WPN_SVD/hy_take1/00_x-AfM2lkjCLIU1fwW8BRY_model.glb",
+ "body_take": "hy_take1 (Hunyuan v3.1 Pro, ref_left + nano-banana right view as back image, 40k); world-only, 40k -> 7k with a high-to-low normal bake",
+ "work": "RawAssets/wp03/WPN_SVD/build_hy",
+ "left_img": "RawAssets/wp03/WPN_SVD/ref_left",
+ "right_img": "RawAssets/wp03/WPN_SVD/right",
+ "sockets_img": {"Muzzle": [75, 763], "SightFront": [293, 670], "SightRear": [2127, 583], "Grip": [1977, 926], "LeftHand": [1126, 751]},
+ "pivot": "Grip",
+ "world": {"tris": 7000, "lods": [0.5, 0.22], "ao_size": 1024, "sockets": ["Muzzle", "LeftHand", "SightRear"]},
+ "ao_distance": 0.05,
+ "tex": {"project_metal": 0.8, "grade_wood": "sat=0.88,val=0.85,smooth=0.35,nstr=0.7", "grade_metal": "smooth=0.42", "smooth_max": 0.5},
+ "review": {}
+}

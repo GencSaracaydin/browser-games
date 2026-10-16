@@ -1,0 +1,24 @@
+{
+    "name": "LongShadow.Tests.PlayMode.Characters",
+    "rootNamespace": "LongShadow.Tests.PlayMode.Characters",
+    "references": [
+        "LongShadow.Core",
+        "LongShadow.Characters",
+        "Unity.Animation.Rigging",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

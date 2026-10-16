@@ -1,0 +1,222 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 260180aeceed947999c43559235b056f, type: 3}
+  m_Name: LIB_CombatFx
+  m_EditorClassIdentifier: LongShadow.Combat::LongShadow.Combat.Data.CombatFxLibrary
+  _entries:
+  - _id: Tracer
+    _prefab: {fileID: 0}
+    _material: {fileID: 2100000, guid: 6793d14cfffe441eabbe26cb243df7ff, type: 2}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Muzzle.Flash
+    _prefab: {fileID: 0}
+    _material: {fileID: 2100000, guid: 858df1c6d9dc94142a02794f1bb38367, type: 2}
+    _meshes:
+    - {fileID: 4300000, guid: 7166eada7eb5e4c6086f2afa3a69db07, type: 2}
+    - {fileID: 4300000, guid: c7b1ae35dca844d41b53840e509adb41, type: 2}
+    - {fileID: 4300000, guid: d2d7834359d154b5bbdaced57f6bfba6, type: 2}
+    - {fileID: 4300000, guid: 608a41bf6a9c244e19578ba03ae5ea43, type: 2}
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Impact.Dust
+    _prefab: {fileID: 6710013875777652683, guid: 9d0f4b41521a14b23abc8209021958be, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Impact.Stone
+    _prefab: {fileID: 382446136944554235, guid: e6c3ed1f7eeec4e709dc16d02a465fc7, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Impact.Plaster
+    _prefab: {fileID: 1216109230737580220, guid: 0f551c6f9e5ee4054943a2ac627fde6f, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Impact.Wood
+    _prefab: {fileID: 2055107415980176518, guid: f533326319bfe416295572f3f97835c2, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Impact.Metal
+    _prefab: {fileID: 4400112465510900611, guid: 60dd98fe22de5422cb9d057bf7e3269b, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Impact.Fabric
+    _prefab: {fileID: 1560476568185274459, guid: 07e2e02b7f9a94593a27e9e4d81dda79, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Impact.Glass
+    _prefab: {fileID: 6050018831190653743, guid: ed1454233e5084857bacc178474d3f5d, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Impact.Flesh
+    _prefab: {fileID: 424352165318655674, guid: d6329db9b0c8f463f920f21316bd8eda, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Impact.Fruit
+    _prefab: {fileID: 5616245095745646651, guid: 1ff4ac3c863dc48ab82e13038ca04af1, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Muzzle.Smoke
+    _prefab: {fileID: 6110645130740165238, guid: bc4e17591d839452d88045064410e242, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Explosion.Frag
+    _prefab: {fileID: 1446247515806686960, guid: 78c54cc57e9934c6193b19acec2d7de3, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Explosion.Rocket
+    _prefab: {fileID: 7000041173753109563, guid: d9072beca252a4b3998726bb363e606d, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Explosion.Fireball
+    _prefab: {fileID: 9112299785598685028, guid: 785d6ccf3a4ac4cdd987f91f20c72acc, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Smoke.Cloud
+    _prefab: {fileID: 4231671081734721189, guid: 9b8e9dbf0c7204d3092e0dd90431dfd3, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Smoke.Trail
+    _prefab: {fileID: 773704054820862557, guid: 9cdaf377faa974a78a3a9d90bfdea26e, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Sparks.Burst
+    _prefab: {fileID: 7474159026606082676, guid: c2631613654a14ed7b11f63547b94419, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Fire.Loop
+    _prefab: {fileID: 7356169763503180073, guid: c79f47badf9464f37b2bcd575b3534e1, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Decal.BulletHoles
+    _prefab: {fileID: 0}
+    _material: {fileID: 2100000, guid: 178d447af8ed74cf888a251ffda8bfca, type: 2}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Decal.Blood
+    _prefab: {fileID: 0}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Decal.Scorch
+    _prefab: {fileID: 0}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Casing.556x45
+    _prefab: {fileID: 0}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Casing.762x39
+    _prefab: {fileID: 0}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Casing.762x51
+    _prefab: {fileID: 0}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Casing.9x19
+    _prefab: {fileID: 0}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Projectile.M67
+    _prefab: {fileID: 7707856916863866857, guid: e87aa05a5acbf4dab91bdd873cbf24e8, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Projectile.RPG7
+    _prefab: {fileID: 0}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []
+  - _id: Prop.AmmoCrate
+    _prefab: {fileID: 1310972333236712913, guid: cf0be2b9eb0e94d8d81d0709b5d79f94, type: 3}
+    _material: {fileID: 0}
+    _meshes: []
+    _rectNames: []
+    _rects: []
+    _sizes: []

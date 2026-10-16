@@ -1,0 +1,19 @@
+{
+    "name": "LongShadow.AI",
+    "rootNamespace": "LongShadow.AI",
+    "references": [
+        "LongShadow.Core",
+        "Unity.AI.Navigation",
+        "Unity.Splines",
+        "Unity.Mathematics"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
