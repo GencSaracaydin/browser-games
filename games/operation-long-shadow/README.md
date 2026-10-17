@@ -2,7 +2,7 @@
 
 A Cold War first-person shooter in the style of Call of Duty: Black Ops, built in Unity 6 (URP) for WebGL.
 
-**October 1984, the fictional Republic of Sardahn.** A four-man black-ops team raids the market town of Zaroud at golden hour to recover a warlord's ledgers, film reels and a numbers-station codebook. The sun sets in the middle of the raid, and a numbers station starts reading on the squad's own radio. The mission is told as a flashback from an interrogation chair: a helicopter insertion cold open, AI squadmates, radio chatter, title cards and a debrief.
+**October 1984, Gharyan, Libya.** A four-man CIA black-ops team raids the war-torn hill town of Gharyan at golden hour to recover a warlord's ledgers, film reels and a numbers-station codebook. The sun sets in the middle of the raid, and a numbers station starts reading on the squad's own radio. The mission is told as a flashback from an interrogation chair: a helicopter insertion cold open, AI squadmates, radio chatter, title cards and a debrief.
 
 > **Status: in development.** A playable web build will appear here when it's ready.
 
